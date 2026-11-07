@@ -1,0 +1,11 @@
+{
+  "name": "bondok-chicken",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "description": "موقع مطعم دجاج بندق الرسمي - فرايد تشيكن، دليفري، استلام مسبق من الفرع، منيو تفاعلي كامل وتتبع الطلبات"
+}
