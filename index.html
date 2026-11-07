@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>شيكن باشا | Chicken Basha - أصل القرمشة المصرية والخلطة الملكية</title>
     <meta name="description" content="مطعم شيكن باشا - أقوى فرايد تشيكن مقرمش بخلطة الباشا السرية. اطلب دليفري يوصلك ساخن أو احجز طلبك مسبقاً واستلمه فوراً من أقرب فرع بدون انتظار!" />
 
@@ -45,10 +45,10 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="text-slate-100 font-cairo antialiased selection:bg-amber-500 selection:text-black min-h-screen flex flex-col justify-between">
+  <body class="text-slate-100 font-cairo antialiased selection:bg-amber-500 selection:text-black min-h-screen flex flex-col justify-between pb-mobile-nav md:pb-0">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-red-600 via-orange-600 to-amber-500 text-black text-xs font-black py-2.5 px-4 shadow-lg border-b border-black/10">
+    <div class="bg-gradient-to-r from-red-600 via-orange-600 to-amber-500 text-black text-[11px] sm:text-xs font-black py-2 px-3 sm:px-4 shadow-lg border-b border-black/10">
       <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-center sm:text-right">
         <div class="flex items-center gap-2 mx-auto sm:mx-0">
           <span class="bg-black text-amber-400 px-2 py-0.5 rounded text-[10px] font-black tracking-wider">عرض الباشا</span>
@@ -64,21 +64,21 @@
 
     <!-- Navigation Header -->
     <header class="sticky top-0 z-40 glass-nav shadow-2xl">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
         
         <!-- Brand Logo -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-red-600 flex items-center justify-center shadow-lg shadow-orange-600/30 group-hover:scale-105 transition-transform duration-300 border border-amber-300 flex-shrink-0">
-            <svg class="w-7 h-7 text-black fill-current" viewBox="0 0 24 24">
+        <a href="#" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-red-600 flex items-center justify-center shadow-lg shadow-orange-600/30 group-hover:scale-105 transition-transform duration-300 border border-amber-300 flex-shrink-0">
+            <svg class="w-5 h-5 sm:w-7 sm:h-7 text-black fill-current" viewBox="0 0 24 24">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
           </div>
           <div>
-            <div class="flex items-center gap-1.5">
-              <span class="text-2xl sm:text-3xl font-black text-white tracking-tight">شيكن باشا</span>
-              <span class="text-[11px] text-amber-300 font-black bg-amber-500/20 border border-amber-500/40 px-2 py-0.5 rounded-lg shadow-sm">Chicken Basha</span>
+            <div class="flex items-center gap-1 sm:gap-1.5">
+              <span class="text-xl sm:text-3xl font-black text-white tracking-tight">شيكن باشا</span>
+              <span class="text-[9px] sm:text-[11px] text-amber-300 font-black bg-amber-500/20 border border-amber-500/40 px-1.5 py-0.5 rounded shadow-sm">Chicken Basha</span>
             </div>
-            <p class="text-[11px] text-amber-200/70 font-bold">أصل القرمشة المصرية والخلطة الملكية</p>
+            <p class="text-[10px] sm:text-[11px] text-amber-200/70 font-bold hidden sm:block">أصل القرمشة المصرية والخلطة الملكية</p>
           </div>
         </a>
 
@@ -114,8 +114,22 @@
         </nav>
 
         <!-- Right Side: Branch + Track Order + Cart -->
-        <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex items-center gap-1.5 sm:gap-3">
           
+          <!-- Mobile Order Mode Quick Pill -->
+          <button 
+            type="button" 
+            onclick="window.toggleMobileOrderType()"
+            class="md:hidden flex items-center gap-1 px-2.5 py-1.5 bg-[#1f1a15] border border-amber-500/30 rounded-xl text-[11px] font-black text-amber-300 active:scale-95 transition shadow-sm"
+            id="mobile-header-order-btn"
+            title="تغيير نوع الطلب"
+          >
+            <span id="mobile-header-order-icon" class="inline-flex items-center text-amber-400">
+              <svg class="w-3.5 h-3.5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </span>
+            <span id="mobile-header-order-text">دليفري</span>
+          </button>
+
           <!-- Live Tracker Button -->
           <button 
             onclick="window.openOrderTracker()"
@@ -460,8 +474,8 @@
         </div>
 
         <!-- Categories Horizontal Scroll Tabs -->
-        <div class="mb-8 overflow-x-auto pb-2 scrollbar-none">
-          <div id="categories-container" class="flex items-center gap-2.5 min-w-max">
+        <div class="sticky-category-bar mb-6 sm:mb-8 py-2.5 -mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto no-scrollbar">
+          <div id="categories-container" class="flex items-center gap-2 sm:gap-2.5 min-w-max">
             
     <button 
       onclick="window.selectCategory('all')"
@@ -4654,17 +4668,18 @@
     </div>
 
     <!-- Customizer Modal -->
-    <div id="customizer-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div id="customizer-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div onclick="window.closeCustomizerModal()" class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-      <div id="customizer-content" class="relative w-full max-w-lg bg-[#181512] rounded-3xl border-2 border-amber-500/30 shadow-2xl overflow-hidden z-10">
+      <div id="customizer-content" class="relative w-full max-w-lg bg-[#181512] rounded-t-3xl sm:rounded-3xl border-t-2 sm:border-2 border-amber-500/30 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
         <!-- Rendered dynamically by app.js -->
       </div>
     </div>
 
     <!-- Checkout Modal -->
-    <div id="checkout-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div id="checkout-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div onclick="window.closeCheckoutModal()" class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-      <div class="relative w-full max-w-xl bg-[#181512] rounded-3xl border-2 border-amber-500/30 shadow-2xl overflow-hidden z-10 max-h-[90vh] flex flex-col">
+      <div class="relative w-full max-w-xl bg-[#181512] rounded-t-3xl sm:rounded-3xl border-t-2 sm:border-2 border-amber-500/30 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
+        <div class="w-10 h-1 bg-stone-700 rounded-full mx-auto my-2.5 sm:hidden flex-shrink-0"></div>
         
         <div class="p-5 bg-[#1f1a15] border-b border-amber-500/20 flex items-center justify-between">
           <div class="flex items-center gap-2.5">
@@ -4686,15 +4701,15 @@
     </div>
 
     <!-- Tracker Modal -->
-    <div id="tracker-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div id="tracker-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div onclick="window.closeOrderTracker()" class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-      <div id="tracker-content" class="relative w-full max-w-lg bg-[#181512] rounded-3xl border-2 border-amber-500/40 shadow-2xl overflow-hidden z-10">
+      <div id="tracker-content" class="relative w-full max-w-lg bg-[#181512] rounded-t-3xl sm:rounded-3xl border-t-2 sm:border-2 border-amber-500/40 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
         <!-- Rendered by app.js -->
       </div>
     </div>
 
     <!-- Floating Actions (WhatsApp & Cart) -->
-    <div class="fixed bottom-6 left-6 z-40 flex flex-col items-end gap-3">
+    <div class="fixed bottom-6 left-6 z-40 hidden md:flex flex-col items-end gap-3">
       
       <!-- WhatsApp Button -->
       <a 
@@ -4722,6 +4737,44 @@
       </button>
 
     </div>
+
+    
+    <!-- Bottom Navigation Bar for Mobile Phones (Native App Experience) -->
+    <nav id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 z-40 bg-[#14110e]/95 backdrop-blur-xl border-t border-amber-500/25 px-3 py-1.5 md:hidden flex justify-around items-center bottom-nav-safe shadow-[0_-5px_25px_rgba(0,0,0,0.7)]">
+      
+      <!-- Menu Tab -->
+      <a href="#menu-section" class="flex flex-col items-center justify-center py-1 px-2 text-stone-300 hover:text-amber-400 active:scale-95 transition">
+        <svg class="w-5 h-5 text-amber-400 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        <span class="text-[10px] font-black mt-1">المنيو</span>
+      </a>
+
+      <!-- Order Mode Toggle (Delivery / Pickup) -->
+      <button type="button" onclick="window.toggleMobileOrderType()" class="flex flex-col items-center justify-center py-1 px-2 text-stone-300 hover:text-amber-400 active:scale-95 transition">
+        <span id="mobile-nav-order-mode-icon" class="inline-flex items-center text-amber-400">
+          <svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </span>
+        <span id="mobile-nav-order-mode-text" class="text-[10px] font-black mt-1 text-amber-300">دليفري</span>
+      </button>
+
+      <!-- Central Cart Button (Highlighted & Accessible) -->
+      <button onclick="window.openCartDrawer()" class="relative -top-3 flex flex-col items-center justify-center w-14 h-14 rounded-full btn-basha-primary shadow-xl shadow-amber-500/40 active:scale-95 transition border-2 border-black cursor-pointer">
+        <svg class="w-6 h-6 text-black fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        <span id="mobile-nav-cart-badge" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-600 text-white font-black text-[10px] flex items-center justify-center border-2 border-black">0</span>
+      </button>
+
+      <!-- Live Order Tracker -->
+      <button onclick="window.openOrderTracker()" class="flex flex-col items-center justify-center py-1 px-2 text-stone-300 hover:text-amber-400 active:scale-95 transition">
+        <svg class="w-5 h-5 text-amber-400 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span class="text-[10px] font-black mt-1">تتبع</span>
+      </button>
+
+      <!-- WhatsApp Quick Order -->
+      <a href="https://wa.me/201023456789?text=مساء%20الخير%20عاوز%20اطلب%20من%20شيكن%20باشا" target="_blank" class="flex flex-col items-center justify-center py-1 px-2 text-emerald-400 hover:text-emerald-300 active:scale-95 transition">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+        <span class="text-[10px] font-black mt-1">واتساب</span>
+      </a>
+
+    </nav>
 
     <!-- Toast Container -->
     <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>

@@ -170,7 +170,7 @@ function renderMenuItems() {
       ? '<p class="text-xs text-amber-100/70 line-clamp-2 leading-relaxed mb-4">' + item.description + '</p>' 
       : '<div class="mb-4"></div>';
 
-    return '<div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group"><div class="relative h-60 overflow-hidden bg-[#241e19]"><img src="' + item.image + '" alt="' + item.name + '" loading="lazy" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"/><div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div><div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">' + badgeHtml + likesHtml + '</div>' + sizesHtml + '</div><div class="p-5 flex-1 flex flex-col justify-between"><div><div class="flex items-start justify-between gap-2 mb-2"><h3 class="text-lg font-black text-white group-hover:text-amber-400 transition-colors leading-snug">' + item.name + '</h3></div>' + descHtml + '</div><div class="pt-3 border-t border-amber-500/15 flex items-center justify-between gap-3"><div><div class="flex items-baseline gap-1.5"><span class="text-xs text-stone-400 font-bold">' + (hasMultipleSizes ? 'يبدأ من ' : '') + '</span><span class="text-2xl font-black text-amber-400">' + minPrice + '</span><span class="text-xs text-amber-200/80 font-bold">ج.م</span></div></div><button onclick="window.openCustomizerModal(\'' + item.id + '\')" class="btn-basha-primary flex items-center gap-1.5 px-4 py-2.5 rounded-2xl text-xs cursor-pointer font-black"><span>تخصيص وإضافة</span><span class="text-sm font-black">+</span></button></div></div></div>';
+    return '<div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group"><div class="relative h-44 sm:h-60 overflow-hidden bg-[#241e19]"><img src="' + item.image + '" alt="' + item.name + '" loading="lazy" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"/><div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div><div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">' + badgeHtml + likesHtml + '</div>' + sizesHtml + '</div><div class="p-4 sm:p-5 flex-1 flex flex-col justify-between"><div><div class="flex items-start justify-between gap-2 mb-2"><h3 class="text-lg font-black text-white group-hover:text-amber-400 transition-colors leading-snug">' + item.name + '</h3></div>' + descHtml + '</div><div class="pt-3 border-t border-amber-500/15 flex items-center justify-between gap-3"><div><div class="flex items-baseline gap-1.5"><span class="text-xs text-stone-400 font-bold">' + (hasMultipleSizes ? 'يبدأ من ' : '') + '</span><span class="text-2xl font-black text-amber-400">' + minPrice + '</span><span class="text-xs text-amber-200/80 font-bold">ج.م</span></div></div><button onclick="window.openCustomizerModal(\'' + item.id + '\')" class="btn-basha-primary flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl sm:rounded-2xl text-xs cursor-pointer font-black active:scale-95 transition min-h-[40px]"><span>تخصيص وإضافة</span><span class="text-sm font-black">+</span></button></div></div></div>';
   }).join('');
 }
 
@@ -266,7 +266,7 @@ function renderCustomizerContent() {
     }).join('') + '</div></div>';
   }
 
-  modalContent.innerHTML = '<div class="relative h-52 bg-[#201a15] overflow-hidden"><img src="' + item.image + '" alt="' + item.name + '" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-black/40 to-transparent"></div><button onclick="window.closeCustomizerModal()" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center font-bold text-lg transition border border-white/20">&times;</button><div class="absolute bottom-3 right-5 left-5"><h3 class="text-xl font-black text-white">' + item.name + '</h3><p class="text-xs text-amber-400 font-extrabold mt-0.5">' + basePrice + ' ج.م</p></div></div><div class="p-6 max-h-[60vh] overflow-y-auto space-y-6">' + sizesSection + spicySection + drinkSection + extrasSection + '<div><label class="block text-xs font-black text-amber-200 mb-2">طلبات وملاحظات خاصة للشيف (اختياري):</label><textarea placeholder="مثال: تسوية سوبر كرانشي، بدون مايونيز، صوص شيدر إضافي..." rows="2" oninput="window.updateCustomizerNotes(this.value)" class="w-full bg-[#1b1713] border border-amber-500/20 rounded-2xl p-3 text-xs sm:text-sm text-white placeholder-stone-500 focus:outline-none focus:border-amber-400">' + (item.notes || '') + '</textarea></div></div><div class="p-5 bg-[#120f0d] border-t border-amber-500/20 flex items-center justify-between gap-4"><div class="flex items-center bg-[#1d1814] border border-amber-500/20 rounded-2xl p-1"><button onclick="window.changeCustomizerQty(-1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-[#28211b] text-white hover:bg-amber-500 hover:text-black font-black text-lg transition">-</button><span class="w-10 text-center font-black text-white text-base">' + item.quantity + '</span><button onclick="window.changeCustomizerQty(1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-[#28211b] text-white hover:bg-amber-500 hover:text-black font-black text-lg transition">+</button></div><button onclick="window.confirmCustomizerAddToCart()" class="btn-basha-primary flex-1 py-3.5 px-6 rounded-2xl text-xs sm:text-sm flex items-center justify-between transition-all cursor-pointer font-black"><span>أضف للطلب الآن</span><span class="bg-black/25 px-3 py-1 rounded-xl text-xs font-black">' + currentTotal + ' ج.م</span></button></div>';
+  modalContent.innerHTML = '<div class="w-10 h-1 bg-stone-700 rounded-full mx-auto my-2 sm:hidden flex-shrink-0"></div><div class="relative h-40 sm:h-52 bg-[#201a15] overflow-hidden flex-shrink-0"><img src="' + item.image + '" alt="' + item.name + '" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-black/40 to-transparent"></div><button onclick="window.closeCustomizerModal()" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center font-bold text-lg transition border border-white/20">&times;</button><div class="absolute bottom-3 right-5 left-5"><h3 class="text-xl font-black text-white">' + item.name + '</h3><p class="text-xs text-amber-400 font-extrabold mt-0.5">' + basePrice + ' ج.م</p></div></div><div class="p-4 sm:p-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto overscroll-contain space-y-4 sm:space-y-6 flex-1">' + sizesSection + spicySection + drinkSection + extrasSection + '<div><label class="block text-xs font-black text-amber-200 mb-2">طلبات وملاحظات خاصة للشيف (اختياري):</label><textarea placeholder="مثال: تسوية سوبر كرانشي، بدون مايونيز، صوص شيدر إضافي..." rows="2" oninput="window.updateCustomizerNotes(this.value)" class="w-full bg-[#1b1713] border border-amber-500/20 rounded-2xl p-3 text-xs sm:text-sm text-white placeholder-stone-500 focus:outline-none focus:border-amber-400">' + (item.notes || '') + '</textarea></div></div><div class="p-3.5 sm:p-5 bg-[#120f0d] border-t border-amber-500/20 flex items-center justify-between gap-3 bottom-nav-safe sm:pb-5 flex-shrink-0"><div class="flex items-center bg-[#1d1814] border border-amber-500/20 rounded-2xl p-1"><button onclick="window.changeCustomizerQty(-1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-[#28211b] text-white hover:bg-amber-500 hover:text-black font-black text-lg transition">-</button><span class="w-10 text-center font-black text-white text-base">' + item.quantity + '</span><button onclick="window.changeCustomizerQty(1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-[#28211b] text-white hover:bg-amber-500 hover:text-black font-black text-lg transition">+</button></div><button onclick="window.confirmCustomizerAddToCart()" class="btn-basha-primary flex-1 py-3.5 px-6 rounded-2xl text-xs sm:text-sm flex items-center justify-between transition-all cursor-pointer font-black"><span>أضف للطلب الآن</span><span class="bg-black/25 px-3 py-1 rounded-xl text-xs font-black">' + currentTotal + ' ج.م</span></button></div>';
 }
 
 function updateCustomizerSize(sizeUUID) {
@@ -447,6 +447,9 @@ function updateCartUI() {
   var floatingBadge = document.getElementById('floating-cart-badge');
   if (floatingBadge) floatingBadge.textContent = totalItemsCount;
 
+  var mobileNavBadge = document.getElementById('mobile-nav-cart-badge');
+  if (mobileNavBadge) mobileNavBadge.textContent = totalItemsCount;
+
   var navTotal = document.getElementById('nav-cart-total');
   if (navTotal) navTotal.textContent = total + ' ج.م';
 
@@ -534,6 +537,27 @@ function applyPromoCode(codeStr) {
 function setOrderType(type) {
   state.orderType = type;
   persistCart();
+
+  var isDelivery = type === 'delivery';
+  var label = isDelivery ? 'دليفري' : 'استلام';
+
+  var mobileHIcon = document.getElementById('mobile-header-order-icon');
+  var mobileHText = document.getElementById('mobile-header-order-text');
+  if (mobileHIcon) {
+    mobileHIcon.innerHTML = isDelivery
+      ? '<svg class="w-3.5 h-3.5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>'
+      : '<svg class="w-3.5 h-3.5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>';
+  }
+  if (mobileHText) mobileHText.textContent = label;
+
+  var mobileNIcon = document.getElementById('mobile-nav-order-mode-icon');
+  var mobileNText = document.getElementById('mobile-nav-order-mode-text');
+  if (mobileNIcon) {
+    mobileNIcon.innerHTML = isDelivery
+      ? '<svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>'
+      : '<svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>';
+  }
+  if (mobileNText) mobileNText.textContent = label;
 
   var deliveryBtns = document.querySelectorAll('[data-order-type-btn="delivery"]');
   var pickupBtns = document.querySelectorAll('[data-order-type-btn="pickup"]');
@@ -882,3 +906,13 @@ document.addEventListener('DOMContentLoaded', function() {
     heroSelect.value = state.selectedBranch;
   }
 });
+
+function toggleMobileOrderType() {
+  var nextType = state.orderType === 'delivery' ? 'pickup' : 'delivery';
+  setOrderType(nextType);
+  var msg = nextType === 'delivery' 
+    ? 'تم التبديل إلى: توصيل دليفري' 
+    : 'تم التبديل إلى: استلام مسبق من الفرع';
+  showToast(msg, 'info');
+}
+window.toggleMobileOrderType = toggleMobileOrderType;
