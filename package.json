@@ -1,11 +1,11 @@
 {
-  "name": "bondok-chicken",
+  "name": "chicken-basha",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node local-server.js",
+    "dev": "node local-server.js"
   },
-  "description": "موقع مطعم دجاج بندق الرسمي - فرايد تشيكن، دليفري، استلام مسبق من الفرع، منيو تفاعلي كامل وتتبع الطلبات"
+  "description": "موقع مطعم شيكن باشا المصري - فرايد تشيكن، دليفري، استلام مسبق من الفرع، منيو تفاعلي وتتبع الطلبات"
 }

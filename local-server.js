@@ -9,7 +9,7 @@ import { exec } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -50,13 +50,18 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  const url = `http://localhost:${PORT}`;
-  console.log(`\n======================================================`);
-  console.log(`موقع دجاج بندق | Bondok Chicken يعمل بنجاح!`);
-  console.log(`الرابط المباشر: ${url}`);
-  console.log(`======================================================\n`);
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  server.listen(PORT, () => {
+    const url = `http://localhost:${PORT}`;
+    console.log(`\n======================================================`);
+    console.log(`موقع شيكن باشا | Chicken Basha يعمل بنجاح!`);
+    console.log(`الرابط المباشر: ${url}`);
+    console.log(`======================================================\n`);
 
-  // Open default browser on Windows
-  exec(`start ${url}`);
-});
+    if (process.platform === 'win32') {
+      exec(`start ${url}`);
+    }
+  });
+}
+
+export default server;
