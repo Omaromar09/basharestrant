@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "node build.js",
-    "start": "node local-server.js",
-    "dev": "node local-server.js"
+    "start": "node tools/local-server.js",
+    "dev": "node tools/local-server.js"
   },
   "description": "موقع مطعم شيكن باشا المصري - فرايد تشيكن، دليفري، استلام مسبق من الفرع، منيو تفاعلي وتتبع الطلبات"
 }

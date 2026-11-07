@@ -6,11 +6,11 @@ if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-const files = ['index.html', 'styles.css', 'app.js', 'data.js', 'vercel.json'];
+const files = ['index.html', 'styles.css', 'app.js', 'data.js'];
 for (const file of files) {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, path.join(distDir, file));
   }
 }
 
-console.log('Build succeeded: Static assets prepared for deployment.');
+console.log('Build succeeded: Static assets prepared for deployment in dist/');
