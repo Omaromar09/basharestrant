@@ -117,8 +117,8 @@ function renderCategories() {
   container.innerHTML = CATEGORIES.map(function(cat) {
     var isActive = state.activeCategory === cat.id;
     var activeClasses = isActive
-      ? 'bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-black font-black shadow-lg shadow-amber-500/30 scale-105 border-amber-300'
-      : 'bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15';
+      ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-stone-950 font-black shadow-lg shadow-amber-500/25 border-amber-300/40 scale-105'
+      : 'bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-800/80 border border-stone-800 hover:border-stone-700';
     
     var iconSvg = ICONS[cat.id] || ICONS.all;
 
@@ -126,7 +126,7 @@ function renderCategories() {
   }).join('');
 }
 
-// Render Menu Items Grid (Zero Emojis)
+// Render Menu Items Grid (Zero Emojis - High Conversion & Photographic Hero)
 function renderMenuItems() {
   var container = document.getElementById('menu-items-grid');
   var countBadge = document.getElementById('menu-items-count');
@@ -150,7 +150,7 @@ function renderMenuItems() {
   }
 
   if (filtered.length === 0) {
-    container.innerHTML = '<div class="col-span-full py-16 text-center bg-[#181512] rounded-3xl border border-amber-500/20 p-8"><div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div><h3 class="text-xl font-black text-white mb-2">للأسف، ملقيناش صنف بالاسم ده!</h3><p class="text-amber-200/70 text-sm max-w-md mx-auto mb-6">جرب تبحث باسم تاني زي "فيليه"، "ريزو"، "تندر"، "كومبو"، أو اضغط لعرض كل المنيو.</p><button onclick="window.resetMenuFilters()" class="btn-basha-primary px-8 py-3 rounded-2xl text-sm transition font-black">عرض كل أصناف المنيو</button></div>';
+    container.innerHTML = '<div class="col-span-full py-16 text-center bg-stone-900/90 rounded-3xl border border-stone-800 p-8"><div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div><h3 class="text-xl font-black text-stone-100 mb-2">للأسف، ملقيناش صنف بالاسم ده!</h3><p class="text-stone-400 text-sm max-w-md mx-auto mb-6">جرب تبحث باسم تاني زي "فيليه"، "ريزو"، "تندر"، "كومبو"، أو اضغط لعرض كل المنيو.</p><button onclick="window.resetMenuFilters()" class="btn-basha-primary px-8 py-3 rounded-2xl text-sm transition font-black">عرض كل أصناف المنيو</button></div>';
     return;
   }
 
@@ -158,19 +158,47 @@ function renderMenuItems() {
     var hasMultipleSizes = item.sizes && item.sizes.length > 1;
     var minPrice = item.price;
     var badgeHtml = item.badge 
-      ? '<span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">' + item.badge + '</span>' 
+      ? '<span class="px-3 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 font-black text-xs rounded-xl shadow-md border border-amber-300/40">' + item.badge + '</span>' 
       : '<span></span>';
     var likesHtml = item.likesCount > 100 
-      ? '<span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">' + item.likesCount + ' تقييم إيجابي</span>' 
+      ? '<span class="px-2.5 py-1 bg-stone-950/85 backdrop-blur-md text-amber-300 text-xs font-bold rounded-xl border border-stone-800">' + item.likesCount + ' تقييم إيجابي</span>' 
       : '';
     var sizesHtml = hasMultipleSizes 
-      ? '<div class="absolute bottom-3 right-3 bg-black/85 backdrop-blur-md px-3 py-1 rounded-xl text-xs text-amber-300 font-black border border-amber-500/30">متوفر بأحجام مختلفة</div>' 
+      ? '<div class="absolute bottom-3 right-3 bg-stone-950/85 backdrop-blur-md px-3 py-1 rounded-xl text-xs text-amber-300 font-black border border-stone-800">متوفر بأحجام مختلفة</div>' 
       : '';
     var descHtml = item.description 
-      ? '<p class="text-xs text-amber-100/70 line-clamp-2 leading-relaxed mb-4">' + item.description + '</p>' 
+      ? '<p class="text-xs text-stone-400 line-clamp-2 leading-relaxed mb-4">' + item.description + '</p>' 
       : '<div class="mb-4"></div>';
 
-    return '<div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group"><div class="relative h-44 sm:h-60 overflow-hidden bg-[#241e19]"><img src="' + item.image + '" alt="' + item.name + '" loading="lazy" class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"/><div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div><div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">' + badgeHtml + likesHtml + '</div>' + sizesHtml + '</div><div class="p-4 sm:p-5 flex-1 flex flex-col justify-between"><div><div class="flex items-start justify-between gap-2 mb-2"><h3 class="text-lg font-black text-white group-hover:text-amber-400 transition-colors leading-snug">' + item.name + '</h3></div>' + descHtml + '</div><div class="pt-3 border-t border-amber-500/15 flex items-center justify-between gap-3"><div><div class="flex items-baseline gap-1.5"><span class="text-xs text-stone-400 font-bold">' + (hasMultipleSizes ? 'يبدأ من ' : '') + '</span><span class="text-2xl font-black text-amber-400">' + minPrice + '</span><span class="text-xs text-amber-200/80 font-bold">ج.م</span></div></div><button onclick="window.openCustomizerModal(\'' + item.id + '\')" class="btn-basha-primary flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl sm:rounded-2xl text-xs cursor-pointer font-black active:scale-95 transition min-h-[40px]"><span>تخصيص وإضافة</span><span class="text-sm font-black">+</span></button></div></div></div>';
+    return '<div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-stone-800/80 hover:border-amber-500/40">' +
+      '<div class="relative h-48 sm:h-56 overflow-hidden bg-stone-950">' +
+        '<img src="' + item.image + '" alt="' + item.name + '" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"/>' +
+        '<div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent pointer-events-none"></div>' +
+        '<div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">' + badgeHtml + likesHtml + '</div>' +
+        sizesHtml +
+      '</div>' +
+      '<div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">' +
+        '<div>' +
+          '<div class="flex items-start justify-between gap-2 mb-2">' +
+            '<h3 class="text-lg font-black text-stone-100 group-hover:text-amber-400 transition-colors leading-snug">' + item.name + '</h3>' +
+          '</div>' +
+          descHtml +
+        '</div>' +
+        '<div class="pt-3 border-t border-stone-800 flex items-center justify-between gap-3">' +
+          '<div>' +
+            '<div class="flex items-baseline gap-1.5">' +
+              '<span class="text-xs text-stone-500 font-bold">' + (hasMultipleSizes ? 'يبدأ من ' : '') + '</span>' +
+              '<span class="text-2xl font-black text-amber-400 tracking-tight">' + minPrice + '</span>' +
+              '<span class="text-xs text-stone-400 font-bold">ج.م</span>' +
+            '</div>' +
+          '</div>' +
+          '<button onclick="window.openCustomizerModal(\'' + item.id + '\')" class="btn-basha-primary flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl sm:rounded-2xl text-xs cursor-pointer font-black active:scale-95 transition min-h-[40px] shadow-md hover:shadow-amber-500/20">' +
+            '<span>تخصيص وإضافة</span>' +
+            '<span class="text-sm font-black">+</span>' +
+          '</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
   }).join('');
 }
 
@@ -232,41 +260,41 @@ function renderCustomizerContent() {
 
   var sizesSection = '';
   if (item.sizes && item.sizes.length > 1) {
-    sizesSection = '<div><label class="block text-sm font-black text-amber-200 mb-3">اختر الحجم المطلوب:</label><div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">' + item.sizes.map(function(s) {
+    sizesSection = '<div><label class="block text-sm font-black text-stone-200 mb-3">اختر الحجم المطلوب:</label><div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">' + item.sizes.map(function(s) {
       var isSelected = item.selectedSize && item.selectedSize.sizeUUID === s.sizeUUID;
-      var cl = isSelected ? 'border-amber-400 bg-amber-500/15 text-amber-300 font-black' : 'border-amber-500/15 bg-[#1b1713] text-stone-300 hover:border-amber-500/30';
+      var cl = isSelected ? 'border-amber-400 bg-amber-500/15 text-stone-100 font-black shadow-sm' : 'border-stone-800 bg-stone-950/80 text-stone-300 hover:border-stone-700';
       return '<label class="flex items-center justify-between p-3.5 rounded-2xl border transition-all cursor-pointer ' + cl + '"><div class="flex items-center gap-3"><input type="radio" name="size-opt" value="' + s.sizeUUID + '" ' + (isSelected ? 'checked' : '') + ' onchange="window.updateCustomizerSize(\'' + s.sizeUUID + '\')" class="accent-amber-500 w-4 h-4" /><span class="text-xs sm:text-sm font-bold">' + s.sizeName + '</span></div><span class="text-xs text-amber-400 font-black">' + s.price + ' ج.م</span></label>';
     }).join('') + '</div></div>';
   }
 
   var spicySection = '';
   if (item.spicyOptions && item.spicyOptions.length > 0) {
-    spicySection = '<div><label class="block text-sm font-black text-amber-200 mb-3">اختر درجة الحرارة والتسوية:</label><div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">' + item.spicyOptions.map(function(opt) {
+    spicySection = '<div><label class="block text-sm font-black text-stone-200 mb-3">اختر درجة الحرارة والتسوية:</label><div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">' + item.spicyOptions.map(function(opt) {
       var isChecked = item.selectedSpicy === opt;
-      var cl = isChecked ? 'border-amber-400 bg-amber-500/15 text-amber-300 font-black' : 'border-amber-500/15 bg-[#1b1713] text-stone-300 hover:border-amber-500/30';
+      var cl = isChecked ? 'border-amber-400 bg-amber-500/15 text-stone-100 font-black shadow-sm' : 'border-stone-800 bg-stone-950/80 text-stone-300 hover:border-stone-700';
       return '<label class="flex items-center justify-between p-3.5 rounded-2xl border transition-all cursor-pointer ' + cl + '"><div class="flex items-center gap-3"><input type="radio" name="spicy-opt" value="' + opt + '" ' + (isChecked ? 'checked' : '') + ' onchange="window.updateCustomizerSpicy(\'' + opt + '\')" class="accent-amber-500 w-4 h-4" /><span class="text-xs sm:text-sm font-bold">' + opt + '</span></div></label>';
     }).join('') + '</div></div>';
   }
 
   var drinkSection = '';
   if (item.drinkChoices && item.drinkChoices.length > 0) {
-    drinkSection = '<div><label class="block text-sm font-black text-amber-200 mb-3">اختر المشروب المفضل:</label><div class="grid grid-cols-2 gap-2.5">' + item.drinkChoices.map(function(d) {
+    drinkSection = '<div><label class="block text-sm font-black text-stone-200 mb-3">اختر المشروب المفضل:</label><div class="grid grid-cols-2 gap-2.5">' + item.drinkChoices.map(function(d) {
       var isSelected = item.selectedDrink === d.id;
-      var cl = isSelected ? 'border-amber-400 bg-amber-500/15 text-amber-300 font-black' : 'border-amber-500/15 bg-[#1b1713] text-stone-300 hover:border-amber-500/30';
+      var cl = isSelected ? 'border-amber-400 bg-amber-500/15 text-stone-100 font-black shadow-sm' : 'border-stone-800 bg-stone-950/80 text-stone-300 hover:border-stone-700';
       return '<label class="flex items-center justify-between p-3 rounded-2xl border transition-all cursor-pointer ' + cl + '"><div class="flex items-center gap-2.5"><input type="radio" name="drink-opt" value="' + d.id + '" ' + (isSelected ? 'checked' : '') + ' onchange="window.updateCustomizerDrink(\'' + d.id + '\')" class="accent-amber-500 w-4 h-4" /><span class="text-xs font-bold">' + d.name + '</span></div></label>';
     }).join('') + '</div></div>';
   }
 
   var extrasSection = '';
   if (item.extras && item.extras.length > 0) {
-    extrasSection = '<div><label class="block text-sm font-black text-amber-200 mb-3">إضافات وصوصات إضافية:</label><div class="space-y-2">' + item.extras.map(function(ext) {
+    extrasSection = '<div><label class="block text-sm font-black text-stone-200 mb-3">إضافات وصوصات إضافية:</label><div class="space-y-2">' + item.extras.map(function(ext) {
       var isChecked = item.selectedExtras.indexOf(ext.id) > -1;
-      var cl = isChecked ? 'border-amber-400 bg-amber-500/15 text-white font-bold' : 'border-amber-500/15 bg-[#1b1713] text-stone-300 hover:border-amber-500/30';
+      var cl = isChecked ? 'border-amber-400 bg-amber-500/15 text-white font-bold shadow-sm' : 'border-stone-800 bg-stone-950/80 text-stone-300 hover:border-stone-700';
       return '<label class="flex items-center justify-between p-3.5 rounded-2xl border transition-all cursor-pointer ' + cl + '"><div class="flex items-center gap-3"><input type="checkbox" value="' + ext.id + '" ' + (isChecked ? 'checked' : '') + ' onchange="window.toggleCustomizerExtra(\'' + ext.id + '\')" class="accent-amber-500 w-4 h-4 rounded" /><span class="text-xs sm:text-sm">' + ext.name + '</span></div><span class="text-xs text-amber-400 font-black">+' + ext.price + ' ج.م</span></label>';
     }).join('') + '</div></div>';
   }
 
-  modalContent.innerHTML = '<div class="w-10 h-1 bg-stone-700 rounded-full mx-auto my-2 sm:hidden flex-shrink-0"></div><div class="relative h-40 sm:h-52 bg-[#201a15] overflow-hidden flex-shrink-0"><img src="' + item.image + '" alt="' + item.name + '" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-black/40 to-transparent"></div><button onclick="window.closeCustomizerModal()" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center font-bold text-lg transition border border-white/20">&times;</button><div class="absolute bottom-3 right-5 left-5"><h3 class="text-xl font-black text-white">' + item.name + '</h3><p class="text-xs text-amber-400 font-extrabold mt-0.5">' + basePrice + ' ج.م</p></div></div><div class="p-4 sm:p-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto overscroll-contain space-y-4 sm:space-y-6 flex-1">' + sizesSection + spicySection + drinkSection + extrasSection + '<div><label class="block text-xs font-black text-amber-200 mb-2">طلبات وملاحظات خاصة للشيف (اختياري):</label><textarea placeholder="مثال: تسوية سوبر كرانشي، بدون مايونيز، صوص شيدر إضافي..." rows="2" oninput="window.updateCustomizerNotes(this.value)" class="w-full bg-[#1b1713] border border-amber-500/20 rounded-2xl p-3 text-xs sm:text-sm text-white placeholder-stone-500 focus:outline-none focus:border-amber-400">' + (item.notes || '') + '</textarea></div></div><div class="p-3.5 sm:p-5 bg-[#120f0d] border-t border-amber-500/20 flex items-center justify-between gap-3 bottom-nav-safe sm:pb-5 flex-shrink-0"><div class="flex items-center bg-[#1d1814] border border-amber-500/20 rounded-2xl p-1"><button onclick="window.changeCustomizerQty(-1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-[#28211b] text-white hover:bg-amber-500 hover:text-black font-black text-lg transition">-</button><span class="w-10 text-center font-black text-white text-base">' + item.quantity + '</span><button onclick="window.changeCustomizerQty(1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-[#28211b] text-white hover:bg-amber-500 hover:text-black font-black text-lg transition">+</button></div><button onclick="window.confirmCustomizerAddToCart()" class="btn-basha-primary flex-1 py-3.5 px-6 rounded-2xl text-xs sm:text-sm flex items-center justify-between transition-all cursor-pointer font-black"><span>أضف للطلب الآن</span><span class="bg-black/25 px-3 py-1 rounded-xl text-xs font-black">' + currentTotal + ' ج.م</span></button></div>';
+  modalContent.innerHTML = '<div class="w-10 h-1 bg-stone-700 rounded-full mx-auto my-2 sm:hidden flex-shrink-0"></div><div class="relative h-44 sm:h-56 bg-stone-950 overflow-hidden flex-shrink-0"><img src="' + item.image + '" alt="' + item.name + '" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/30 to-transparent"></div><button onclick="window.closeCustomizerModal()" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-stone-950/70 hover:bg-stone-950 text-white flex items-center justify-center font-bold text-lg transition border border-stone-700">&times;</button><div class="absolute bottom-3 right-5 left-5"><h3 class="text-xl font-black text-stone-100">' + item.name + '</h3><p class="text-xs text-amber-400 font-extrabold mt-0.5">' + basePrice + ' ج.م</p></div></div><div class="p-4 sm:p-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto overscroll-contain space-y-4 sm:space-y-6 flex-1">' + sizesSection + spicySection + drinkSection + extrasSection + '<div><label class="block text-xs font-black text-stone-200 mb-2">طلبات وملاحظات خاصة للشيف (اختياري):</label><textarea placeholder="مثال: تسوية سوبر كرانشي، بدون مايونيز، صوص شيدر إضافي..." rows="2" oninput="window.updateCustomizerNotes(this.value)" class="w-full bg-stone-950 border border-stone-800 rounded-2xl p-3 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400">' + (item.notes || '') + '</textarea></div></div><div class="p-3.5 sm:p-5 bg-stone-950 border-t border-stone-800 flex items-center justify-between gap-3 bottom-nav-safe sm:pb-5 flex-shrink-0"><div class="flex items-center bg-stone-900 border border-stone-800 rounded-2xl p-1"><button onclick="window.changeCustomizerQty(-1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-stone-800 text-white hover:bg-amber-500 hover:text-stone-950 font-black text-lg transition">-</button><span class="w-10 text-center font-black text-white text-base">' + item.quantity + '</span><button onclick="window.changeCustomizerQty(1)" class="w-9 h-9 flex items-center justify-center rounded-xl bg-stone-800 text-white hover:bg-amber-500 hover:text-stone-950 font-black text-lg transition">+</button></div><button onclick="window.confirmCustomizerAddToCart()" class="btn-basha-primary flex-1 py-3.5 px-6 rounded-2xl text-xs sm:text-sm flex items-center justify-between transition-all cursor-pointer font-black shadow-lg"><span>أضف للطلب الآن</span><span class="bg-stone-950/30 px-3 py-1 rounded-xl text-xs font-black">' + currentTotal + ' ج.م</span></button></div>';
 }
 
 function updateCustomizerSize(sizeUUID) {
@@ -504,7 +532,27 @@ function updateCartUI() {
 
     if (itemsContainer) {
       itemsContainer.innerHTML = state.cart.map(function(item) {
-        return '<div class="bg-[#1b1713] rounded-2xl p-3 border border-amber-500/15 flex gap-3 items-center justify-between"><img src="' + item.image + '" alt="' + item.name + '" class="w-16 h-16 rounded-xl object-cover border border-amber-500/20 flex-shrink-0" /><div class="flex-1 min-w-0"><h4 class="text-xs sm:text-sm font-black text-white truncate">' + item.name + '</h4><div class="flex flex-wrap gap-1 mt-1 text-[10px] text-amber-200/80">' + (item.sizeName ? '<span class="bg-black/40 px-1.5 py-0.5 rounded border border-amber-500/20">' + item.sizeName + '</span>' : '') + (item.spicyOption ? '<span class="bg-black/40 px-1.5 py-0.5 rounded border border-amber-500/20">' + item.spicyOption + '</span>' : '') + (item.drinkChoice ? '<span class="bg-black/40 px-1.5 py-0.5 rounded border border-amber-500/20">' + item.drinkChoice + '</span>' : '') + '</div>' + (item.extras && item.extras.length > 0 ? '<p class="text-[10px] text-stone-400 mt-1 truncate">إضافات: ' + item.extras.map(function(e) { return e.name; }).join('، ') + '</p>' : '') + '<div class="text-xs font-black text-amber-400 mt-1">' + (item.unitPrice * item.quantity) + ' ج.م</div></div><div class="flex flex-col items-center gap-1"><div class="flex items-center bg-[#251f19] border border-amber-500/20 rounded-xl p-0.5"><button onclick="window.updateCartItemQty(\'' + item.cartKey + '\', -1)" class="w-6 h-6 flex items-center justify-center text-white hover:text-amber-400 font-bold">-</button><span class="w-6 text-center text-xs font-bold text-white">' + item.quantity + '</span><button onclick="window.updateCartItemQty(\'' + item.cartKey + '\', 1)" class="w-6 h-6 flex items-center justify-center text-white hover:text-amber-400 font-bold">+</button></div><button onclick="window.removeCartItem(\'' + item.cartKey + '\')" class="text-[10px] text-stone-500 hover:text-red-400 font-bold transition mt-1">حذف</button></div></div>';
+        return '<div class="bg-stone-900/90 rounded-2xl p-3 border border-stone-800 flex gap-3 items-center justify-between">' +
+          '<img src="' + item.image + '" alt="' + item.name + '" class="w-16 h-16 rounded-xl object-cover border border-stone-800 flex-shrink-0" />' +
+          '<div class="flex-1 min-w-0">' +
+            '<h4 class="text-xs sm:text-sm font-black text-stone-100 truncate">' + item.name + '</h4>' +
+            '<div class="flex flex-wrap gap-1 mt-1 text-[10px] text-stone-300">' +
+              (item.sizeName ? '<span class="bg-stone-950 px-1.5 py-0.5 rounded border border-stone-800">' + item.sizeName + '</span>' : '') +
+              (item.spicyOption ? '<span class="bg-stone-950 px-1.5 py-0.5 rounded border border-stone-800">' + item.spicyOption + '</span>' : '') +
+              (item.drinkChoice ? '<span class="bg-stone-950 px-1.5 py-0.5 rounded border border-stone-800">' + item.drinkChoice + '</span>' : '') +
+            '</div>' +
+            (item.extras && item.extras.length > 0 ? '<p class="text-[10px] text-stone-400 mt-1 truncate">إضافات: ' + item.extras.map(function(e) { return e.name; }).join('، ') + '</p>' : '') +
+            '<div class="text-xs font-black text-amber-400 mt-1">' + (item.unitPrice * item.quantity) + ' ج.م</div>' +
+          '</div>' +
+          '<div class="flex flex-col items-center gap-1">' +
+            '<div class="flex items-center bg-stone-950 border border-stone-800 rounded-xl p-0.5">' +
+              '<button onclick="window.updateCartItemQty(\'' + item.cartKey + '\', -1)" class="w-6 h-6 flex items-center justify-center text-stone-300 hover:text-amber-400 font-bold">-</button>' +
+              '<span class="w-6 text-center text-xs font-bold text-stone-100">' + item.quantity + '</span>' +
+              '<button onclick="window.updateCartItemQty(\'' + item.cartKey + '\', 1)" class="w-6 h-6 flex items-center justify-center text-stone-300 hover:text-amber-400 font-bold">+</button>' +
+            '</div>' +
+            '<button onclick="window.removeCartItem(\'' + item.cartKey + '\')" class="text-[10px] text-stone-500 hover:text-red-400 font-bold transition mt-1">حذف</button>' +
+          '</div>' +
+        '</div>';
       }).join('');
     }
   }
@@ -645,11 +693,74 @@ function renderCheckoutForm() {
 
   var currentBranch = BRANCHES.find(function(b) { return b.id === state.selectedBranch; }) || BRANCHES[0];
 
-  container.innerHTML = '<form id="checkout-form" onsubmit="event.preventDefault(); window.submitOrder();" class="space-y-5 text-right"><div class="flex bg-[#14110e] p-1.5 rounded-2xl border border-amber-500/20 text-xs font-bold"><button type="button" onclick="window.setOrderType(\'delivery\'); window.renderCheckoutForm();" class="flex-1 py-2.5 rounded-xl transition ' + (state.orderType === 'delivery' ? 'bg-amber-500 text-black font-black' : 'text-stone-300') + '">توصيل دليفري</button><button type="button" onclick="window.setOrderType(\'pickup\'); window.renderCheckoutForm();" class="flex-1 py-2.5 rounded-xl transition ' + (state.orderType === 'pickup' ? 'bg-amber-500 text-black font-black' : 'text-stone-300') + '">استلام من الفرع</button></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-xs font-black text-amber-200 mb-1">الاسم بالكامل *</label><input type="text" id="order-customer-name" required placeholder="مثال: أحمد محمد" class="w-full bg-[#161310] border border-amber-500/20 rounded-xl p-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-400" /></div><div><label class="block text-xs font-black text-amber-200 mb-1">رقم الموبايل *</label><input type="tel" id="order-customer-phone" required placeholder="010XXXXXXXX أو 011XXXXXXXX" class="w-full bg-[#161310] border border-amber-500/20 rounded-xl p-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-400" /></div></div>' + 
-  (state.orderType === 'delivery' 
-    ? '<div class="space-y-3"><div><label class="block text-xs font-black text-amber-200 mb-1">المنطقة والمدينة *</label><input type="text" id="order-delivery-area" required placeholder="مثال: مدينة نصر، التجمع، المعادي، المهندسين..." class="w-full bg-[#161310] border border-amber-500/20 rounded-xl p-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-400" /></div><div><label class="block text-xs font-black text-amber-200 mb-1">العنوان التفصيلي *</label><input type="text" id="order-delivery-address" required placeholder="اسم الشارع، رقم العقار، الدور، الشقة أو علامة مميزة" class="w-full bg-[#161310] border border-amber-500/20 rounded-xl p-3 text-xs sm:text-sm text-white focus:outline-none focus:border-amber-400" /></div></div>'
-    : '<div class="space-y-3 p-4 bg-[#14110e] rounded-2xl border border-amber-500/20"><div><label class="block text-xs font-black text-amber-200 mb-1">فرع الاستلام المحدد:</label><select id="order-pickup-branch" onchange="window.setPickupBranch(this.value); window.renderCheckoutForm();" class="w-full bg-[#1d1915] border border-amber-500/30 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-amber-400">' + BRANCHES.map(function(b) { return '<option value="' + b.id + '" ' + (b.id === state.selectedBranch ? 'selected' : '') + '>' + b.name + ' - ' + b.address + '</option>'; }).join('') + '</select></div><div><label class="block text-xs font-black text-amber-200 mb-1">وقت الاستلام المتوقع:</label><select id="order-pickup-time" class="w-full bg-[#1d1915] border border-amber-500/30 rounded-xl p-3 text-xs text-white focus:outline-none focus:border-amber-400"><option value="15-mins">خلال 15 دقيقة (استلام سريع)</option><option value="30-mins">خلال 30 دقيقة</option><option value="45-mins">خلال 45 دقيقة</option><option value="60-mins">خلال ساعة</option></select></div></div>') +
-  '<div><label class="block text-xs font-black text-amber-200 mb-2">طريقة الدفع:</label><div class="grid grid-cols-2 gap-2.5"><label class="flex items-center gap-2 p-3 rounded-xl border border-amber-500/20 bg-[#161310] text-xs font-bold text-white cursor-pointer hover:border-amber-400"><input type="radio" name="payment-method" value="cash" checked class="accent-amber-500" /><span>كاش عند الاستلام</span></label><label class="flex items-center gap-2 p-3 rounded-xl border border-amber-500/20 bg-[#161310] text-xs font-bold text-white cursor-pointer hover:border-amber-400"><input type="radio" name="payment-method" value="instapay" class="accent-amber-500" /><span>إنستاباي / فودافون كاش</span></label></div></div><div class="p-4 bg-[#14110e] rounded-2xl border border-amber-500/20 space-y-2 text-xs text-stone-300"><div class="flex justify-between font-bold text-white"><span>عدد الأصناف:</span><span>' + totalItemsCount + ' وجبة</span></div><div class="flex justify-between"><span>المجموع الفرعي:</span><span>' + subtotal + ' ج.م</span></div>' + (discount > 0 ? '<div class="flex justify-between text-emerald-400 font-bold"><span>الخصم المطبق:</span><span>-' + discount + ' ج.م</span></div>' : '') + '<div class="flex justify-between"><span>رسوم التوصيل:</span><span>' + (deliveryFee === 0 ? 'مجاني' : deliveryFee + ' ج.م') + '</span></div><div class="flex justify-between text-base font-black text-amber-400 pt-2 border-t border-white/10"><span>المبلغ الإجمالي للدفع:</span><span class="text-xl">' + total + ' ج.م</span></div></div><div class="flex flex-col sm:flex-row gap-3 pt-2"><button type="submit" class="btn-basha-primary flex-1 py-4 rounded-2xl text-sm font-black text-center shadow-lg transition cursor-pointer">تأكيد وإرسال الطلب فوراً</button><button type="button" onclick="window.submitOrder(\'whatsapp\')" class="py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-sm text-center transition flex items-center justify-center gap-2 cursor-pointer shadow-lg">إرسال الطلب عبر واتساب</button></div></form>';
+  container.innerHTML = '<form id="checkout-form" onsubmit="event.preventDefault(); window.submitOrder();" class="space-y-5 text-right">' +
+    '<div class="flex bg-stone-950 p-1.5 rounded-2xl border border-stone-800 text-xs font-bold">' +
+      '<button type="button" onclick="window.setOrderType(\'delivery\'); window.renderCheckoutForm();" class="flex-1 py-2.5 rounded-xl transition ' + (state.orderType === 'delivery' ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 font-black shadow-md' : 'text-stone-400 hover:text-stone-200') + '">توصيل دليفري</button>' +
+      '<button type="button" onclick="window.setOrderType(\'pickup\'); window.renderCheckoutForm();" class="flex-1 py-2.5 rounded-xl transition ' + (state.orderType === 'pickup' ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 font-black shadow-md' : 'text-stone-400 hover:text-stone-200') + '">استلام من الفرع</button>' +
+    '</div>' +
+    '<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">' +
+      '<div>' +
+        '<label class="block text-xs font-black text-stone-200 mb-1">الاسم بالكامل *</label>' +
+        '<input type="text" id="order-customer-name" required placeholder="مثال: أحمد محمد" class="w-full bg-stone-950 border border-stone-800 rounded-xl p-3 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400" />' +
+      '</div>' +
+      '<div>' +
+        '<label class="block text-xs font-black text-stone-200 mb-1">رقم الموبايل *</label>' +
+        '<input type="tel" id="order-customer-phone" required placeholder="010XXXXXXXX أو 011XXXXXXXX" class="w-full bg-stone-950 border border-stone-800 rounded-xl p-3 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400" />' +
+      '</div>' +
+    '</div>' + 
+    (state.orderType === 'delivery' 
+      ? '<div class="space-y-3">' +
+          '<div>' +
+            '<label class="block text-xs font-black text-stone-200 mb-1">المنطقة والمدينة *</label>' +
+            '<input type="text" id="order-delivery-area" required placeholder="مثال: مدينة نصر، التجمع، المعادي، المهندسين..." class="w-full bg-stone-950 border border-stone-800 rounded-xl p-3 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400" />' +
+          '</div>' +
+          '<div>' +
+            '<label class="block text-xs font-black text-stone-200 mb-1">العنوان التفصيلي *</label>' +
+            '<input type="text" id="order-delivery-address" required placeholder="اسم الشارع، رقم العقار، الدور، الشقة أو علامة مميزة" class="w-full bg-stone-950 border border-stone-800 rounded-xl p-3 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400" />' +
+          '</div>' +
+        '</div>'
+      : '<div class="space-y-3 p-4 bg-stone-950 rounded-2xl border border-stone-800">' +
+          '<div>' +
+            '<label class="block text-xs font-black text-stone-200 mb-1">فرع الاستلام المحدد:</label>' +
+            '<select id="order-pickup-branch" onchange="window.setPickupBranch(this.value); window.renderCheckoutForm();" class="w-full bg-stone-900 border border-stone-700 rounded-xl p-3 text-xs text-stone-100 focus:outline-none focus:border-amber-400">' +
+              BRANCHES.map(function(b) { return '<option value="' + b.id + '" ' + (b.id === state.selectedBranch ? 'selected' : '') + '>' + b.name + ' - ' + b.address + '</option>'; }).join('') +
+            '</select>' +
+          '</div>' +
+          '<div>' +
+            '<label class="block text-xs font-black text-stone-200 mb-1">وقت الاستلام المتوقع:</label>' +
+            '<select id="order-pickup-time" class="w-full bg-stone-900 border border-stone-700 rounded-xl p-3 text-xs text-stone-100 focus:outline-none focus:border-amber-400">' +
+              '<option value="15-mins">خلال 15 دقيقة (استلام سريع)</option>' +
+              '<option value="30-mins">خلال 30 دقيقة</option>' +
+              '<option value="45-mins">خلال 45 دقيقة</option>' +
+              '<option value="60-mins">خلال ساعة</option>' +
+            '</select>' +
+          '</div>' +
+        '</div>') +
+    '<div>' +
+      '<label class="block text-xs font-black text-stone-200 mb-2">طريقة الدفع:</label>' +
+      '<div class="grid grid-cols-2 gap-2.5">' +
+        '<label class="flex items-center gap-2 p-3 rounded-xl border border-stone-800 bg-stone-950 text-xs font-bold text-stone-200 cursor-pointer hover:border-amber-400">' +
+          '<input type="radio" name="payment-method" value="cash" checked class="accent-amber-500" />' +
+          '<span>كاش عند الاستلام</span>' +
+        '</label>' +
+        '<label class="flex items-center gap-2 p-3 rounded-xl border border-stone-800 bg-stone-950 text-xs font-bold text-stone-200 cursor-pointer hover:border-amber-400">' +
+          '<input type="radio" name="payment-method" value="instapay" class="accent-amber-500" />' +
+          '<span>إنستاباي / فودافون كاش</span>' +
+        '</label>' +
+      '</div>' +
+    '</div>' +
+    '<div class="p-4 bg-stone-950 rounded-2xl border border-stone-800 space-y-2 text-xs text-stone-300">' +
+      '<div class="flex justify-between font-bold text-stone-100"><span>عدد الأصناف:</span><span>' + totalItemsCount + ' وجبة</span></div>' +
+      '<div class="flex justify-between"><span>المجموع الفرعي:</span><span>' + subtotal + ' ج.م</span></div>' +
+      (discount > 0 ? '<div class="flex justify-between text-emerald-400 font-bold"><span>الخصم المطبق:</span><span>-' + discount + ' ج.م</span></div>' : '') +
+      '<div class="flex justify-between"><span>رسوم التوصيل:</span><span>' + (deliveryFee === 0 ? 'مجاني' : deliveryFee + ' ج.م') + '</span></div>' +
+      '<div class="flex justify-between text-base font-black text-amber-400 pt-2 border-t border-stone-800"><span>المبلغ الإجمالي للدفع:</span><span class="text-xl">' + total + ' ج.م</span></div>' +
+    '</div>' +
+    '<div class="flex flex-col sm:flex-row gap-3 pt-2">' +
+      '<button type="submit" class="btn-basha-primary flex-1 py-4 rounded-2xl text-sm font-black text-center shadow-lg transition cursor-pointer">تأكيد وإرسال الطلب فوراً</button>' +
+      '<button type="button" onclick="window.submitOrder(\'whatsapp\')" class="py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-sm text-center transition flex items-center justify-center gap-2 cursor-pointer shadow-lg">إرسال الطلب عبر واتساب</button>' +
+    '</div>' +
+  '</form>';
 }
 
 function submitOrder(destination) {
@@ -797,13 +908,39 @@ function renderTrackerModal(order) {
 
   var currentStep = order.statusStep || 1;
 
-  content.innerHTML = '<div class="p-5 bg-[#1f1a15] border-b border-amber-500/20 flex items-center justify-between"><div><span class="text-xs font-black text-amber-400">تتبع الطلب المباشر</span><h3 class="text-base font-black text-white">كود الطلب: ' + order.id + '</h3></div><button onclick="window.closeOrderTracker()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-white flex items-center justify-center font-bold">&times;</button></div><div class="p-6 space-y-6 max-h-[75vh] overflow-y-auto"><div class="space-y-4">' + steps.map(function(s) {
-    var isDone = s.num <= currentStep;
-    var isCurrent = s.num === currentStep;
-    return '<div class="flex items-start gap-4"><div class="w-8 h-8 rounded-full flex items-center justify-center font-black text-xs flex-shrink-0 transition-all ' + (isDone ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/30' : 'bg-[#221c17] text-stone-500 border border-white/10') + '">' + (isDone ? ICONS.check : s.num) + '</div><div class="flex-1"><h4 class="text-xs sm:text-sm font-black ' + (isCurrent ? 'text-amber-400' : isDone ? 'text-white' : 'text-stone-500') + '">' + s.title + '</h4><p class="text-[11px] text-stone-400 mt-0.5">' + s.desc + '</p></div></div>';
-  }).join('') + '</div><div class="p-4 bg-[#14110e] rounded-2xl border border-amber-500/20 space-y-2 text-xs"><div class="flex justify-between text-stone-300"><span>العميل:</span><span class="font-bold text-white">' + order.customerName + ' (' + order.customerPhone + ')</span></div><div class="flex justify-between text-stone-300"><span>طريقة الاستلام:</span><span class="font-bold text-amber-400">' + (isDelivery ? 'توصيل إلى: ' + order.deliveryArea : 'استلام من: ' + order.branch.name) + '</span></div><div class="flex justify-between text-stone-300"><span>طريقة الدفع:</span><span class="font-bold text-white">' + (order.paymentMethod === 'cash' ? 'كاش عند الاستلام' : 'إنستاباي / محفظة') + '</span></div><div class="flex justify-between text-stone-300 pt-2 border-t border-white/10 font-black text-sm text-amber-400"><span>إجمالي المبلغ:</span><span>' + order.total + ' ج.م</span></div></div><div class="space-y-2"><h4 class="text-xs font-black text-amber-200">الأصناف المطلوبة:</h4><div class="space-y-1.5 text-xs text-stone-300">' + order.items.map(function(it) {
-    return '<div class="flex justify-between p-2 rounded-xl bg-[#171310] border border-white/5"><span>' + it.name + (it.sizeName ? ' (' + it.sizeName + ')' : '') + ' &times; ' + it.quantity + '</span><span class="font-bold text-amber-400">' + (it.unitPrice * it.quantity) + ' ج.م</span></div>';
-  }).join('') + '</div></div></div><div class="p-4 bg-[#120f0d] border-t border-amber-500/20 flex gap-3"><button onclick="window.printReceipt()" class="flex-1 py-3 bg-[#221c17] hover:bg-[#2c241c] text-white text-xs font-bold rounded-xl border border-white/10 transition">طباعة الفاتورة</button><button onclick="window.closeOrderTracker()" class="btn-basha-primary flex-1 py-3 rounded-xl text-xs font-black text-center">إغلاق النافذة</button></div>';
+  content.innerHTML = '<div class="p-5 bg-stone-900 border-b border-stone-800 flex items-center justify-between">' +
+    '<div><span class="text-xs font-black text-amber-400">تتبع الطلب المباشر</span><h3 class="text-base font-black text-stone-100">كود الطلب: ' + order.id + '</h3></div>' +
+    '<button onclick="window.closeOrderTracker()" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-200 flex items-center justify-center font-bold transition">&times;</button>' +
+  '</div>' +
+  '<div class="p-6 space-y-6 max-h-[75vh] overflow-y-auto">' +
+    '<div class="space-y-4">' + steps.map(function(s) {
+      var isDone = s.num <= currentStep;
+      var isCurrent = s.num === currentStep;
+      return '<div class="flex items-start gap-4">' +
+        '<div class="w-8 h-8 rounded-full flex items-center justify-center font-black text-xs flex-shrink-0 transition-all ' + (isDone ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 shadow-md shadow-amber-500/20' : 'bg-stone-800 text-stone-500 border border-stone-700') + '">' + (isDone ? ICONS.check : s.num) + '</div>' +
+        '<div class="flex-1">' +
+          '<h4 class="text-xs sm:text-sm font-black ' + (isCurrent ? 'text-amber-400' : isDone ? 'text-stone-100' : 'text-stone-500') + '">' + s.title + '</h4>' +
+          '<p class="text-[11px] text-stone-400 mt-0.5">' + s.desc + '</p>' +
+        '</div>' +
+      '</div>';
+    }).join('') + '</div>' +
+    '<div class="p-4 bg-stone-950 rounded-2xl border border-stone-800 space-y-2 text-xs">' +
+      '<div class="flex justify-between text-stone-300"><span>العميل:</span><span class="font-bold text-stone-100">' + order.customerName + ' (' + order.customerPhone + ')</span></div>' +
+      '<div class="flex justify-between text-stone-300"><span>طريقة الاستلام:</span><span class="font-bold text-amber-400">' + (isDelivery ? 'توصيل إلى: ' + order.deliveryArea : 'استلام من: ' + order.branch.name) + '</span></div>' +
+      '<div class="flex justify-between text-stone-300"><span>طريقة الدفع:</span><span class="font-bold text-stone-100">' + (order.paymentMethod === 'cash' ? 'كاش عند الاستلام' : 'إنستاباي / محفظة') + '</span></div>' +
+      '<div class="flex justify-between text-stone-300 pt-2 border-t border-stone-800 font-black text-sm text-amber-400"><span>إجمالي المبلغ:</span><span>' + order.total + ' ج.م</span></div>' +
+    '</div>' +
+    '<div class="space-y-2">' +
+      '<h4 class="text-xs font-black text-stone-200">الأصناف المطلوبة:</h4>' +
+      '<div class="space-y-1.5 text-xs text-stone-300">' + order.items.map(function(it) {
+        return '<div class="flex justify-between p-2.5 rounded-xl bg-stone-950 border border-stone-800/80"><span>' + it.name + (it.sizeName ? ' (' + it.sizeName + ')' : '') + ' &times; ' + it.quantity + '</span><span class="font-bold text-amber-400">' + (it.unitPrice * it.quantity) + ' ج.م</span></div>';
+      }).join('') + '</div>' +
+    '</div>' +
+  '</div>' +
+  '<div class="p-4 bg-stone-950 border-t border-stone-800 flex gap-3">' +
+    '<button onclick="window.printReceipt()" class="flex-1 py-3 bg-stone-900 hover:bg-stone-800 text-stone-200 text-xs font-bold rounded-xl border border-stone-700 transition">طباعة الفاتورة</button>' +
+    '<button onclick="window.closeOrderTracker()" class="btn-basha-primary flex-1 py-3 rounded-xl text-xs font-black text-center shadow-md">إغلاق النافذة</button>' +
+  '</div>';
 }
 
 function simulateOrderProgress(order) {

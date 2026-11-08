@@ -1,146 +1,159 @@
-/* شيكن باشا - ألوان وتأثيرات القرمشة المصرية الفخمة والشهية */
+/**
+ * شيكن باشا | Chicken Basha
+ * نظام ألوان وتصميم فاخر معتمد بالكامل على Tailwind CSS:
+ * - درجات الفخامة الداكنة: stone-950, stone-900, stone-800, stone-700
+ * - درجات العنبر والذهب الملكي: amber-400, amber-500, amber-600
+ * - درجات النار والشهية: orange-500, orange-600, red-600
+ * - هرمية بصرية متدرجة ذات عمق احترافي وبطاقات أطباق تبرز جمال التصوير
+ */
 
 :root {
-  --bg-deep: #0c0b0a;
-  --bg-card: #181512;
-  --bg-card-hover: #221c17;
-  --primary-gold: #f59e0b;
-  --primary-amber: #ea580c;
-  --primary-red: #e11d48;
-  --fire-crimson: #dc2626;
-  --cheese-yellow: #fbbf24;
+  /* Tailwind Stone Scale */
+  --stone-50: #fafaf9;
+  --stone-100: #f5f5f4;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+  --stone-950: #0c0a09;
+
+  /* Tailwind Amber & Fire Scale */
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --red-600: #dc2626;
+
+  /* Elevation Surfaces */
+  --bg-canvas: var(--stone-950);
+  --bg-surface: var(--stone-900);
+  --bg-elevated: #24201d;
+  --border-subtle: rgba(68, 64, 60, 0.45);
+  --border-prominent: rgba(245, 158, 11, 0.35);
 }
 
 body {
-  background-color: var(--bg-deep);
+  background-color: var(--bg-canvas);
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(234, 88, 12, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 85% 85%, rgba(225, 29, 72, 0.10) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 60%);
+    radial-gradient(circle at 10% 10%, rgba(245, 158, 11, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(234, 88, 12, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.02) 0%, transparent 60%);
   background-attachment: fixed;
+  color: var(--stone-100);
 }
 
 /* Animations */
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(245, 158, 11, 0.35), 0 0 35px rgba(234, 88, 12, 0.2);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.25), 0 0 30px rgba(234, 88, 12, 0.15);
   }
   50% {
-    box-shadow: 0 0 28px rgba(245, 158, 11, 0.7), 0 0 55px rgba(225, 29, 72, 0.35);
-  }
-}
-
-@keyframes fireFlicker {
-  0%, 100% {
-    transform: scale(1) rotate(0deg);
-  }
-  25% {
-    transform: scale(1.12) rotate(-3deg);
-  }
-  50% {
-    transform: scale(0.95) rotate(3deg);
-  }
-  75% {
-    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.45), 0 0 45px rgba(234, 88, 12, 0.25);
   }
 }
 
 @keyframes floatBadge {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-7px) rotate(1.5deg);
+    transform: translateY(-5px);
   }
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(50%); }
 }
 
 .glow-basha {
-  animation: pulseGlow 2.8s infinite ease-in-out;
-}
-
-.fire-icon {
-  display: inline-block;
-  animation: fireFlicker 1.5s infinite ease-in-out;
+  animation: pulseGlow 3s infinite ease-in-out;
 }
 
 .float-badge {
-  animation: floatBadge 3.5s infinite ease-in-out;
+  animation: floatBadge 4s infinite ease-in-out;
 }
 
-/* Custom Fast-Food Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0e0d0c;
+  background: var(--stone-950);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ea580c 0%, #f59e0b 100%);
+  background: var(--stone-800);
   border-radius: 9999px;
-  border: 2px solid #0e0d0c;
+  border: 2px solid var(--stone-950);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #fbbf24;
+  background: var(--stone-700);
 }
 
 /* Glassmorphism Navigation */
 .glass-nav {
-  background: rgba(16, 14, 12, 0.90);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+  background: rgba(12, 10, 9, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(68, 64, 60, 0.4);
 }
 
-/* Premium Food Card Styling */
+/* Sticky Category Filter Bar */
+.sticky-category-bar {
+  position: sticky;
+  top: 64px;
+  z-index: 25;
+  background: rgba(12, 10, 9, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(68, 64, 60, 0.35);
+}
+@media (min-width: 640px) {
+  .sticky-category-bar {
+    top: 80px;
+  }
+}
+
+/* World-Class Food Card */
 .food-card {
-  background: linear-gradient(180deg, #191613 0%, #13110e 100%);
-  border: 1px solid rgba(245, 158, 11, 0.15);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(180deg, #1c1917 0%, #151311 100%);
+  border: 1px solid rgba(68, 64, 60, 0.45);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .food-card:hover {
-  border-color: rgba(245, 158, 11, 0.55);
-  box-shadow: 0 14px 35px -10px rgba(234, 88, 12, 0.3), 0 0 15px rgba(245, 158, 11, 0.15);
-  transform: translateY(-5px);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.7), 0 0 20px -3px rgba(245, 158, 11, 0.12);
+  transform: translateY(-4px);
 }
 
 /* Gradient Texts */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #fffbeb 0%, #fde047 30%, #f59e0b 70%, #ea580c 100%);
+  background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 30%, #fbbf24 70%, #f59e0b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-fire-gradient {
-  background: linear-gradient(135deg, #fecaca 0%, #f87171 30%, #e11d48 70%, #991b1b 100%);
+  background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 30%, #f87171 70%, #dc2626 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-cheese-gradient {
-  background: linear-gradient(135deg, #fef9c3 0%, #fbbf24 60%, #d97706 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Action Buttons */
+/* High-Conversion CTA Buttons */
 .btn-basha-primary {
-  background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%);
-  color: #000;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ea580c 100%);
+  color: #0c0a09;
   font-weight: 900;
-  box-shadow: 0 8px 20px -4px rgba(234, 88, 12, 0.45);
-  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px -2px rgba(245, 158, 11, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-basha-primary:hover {
-  background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-  box-shadow: 0 12px 28px -4px rgba(234, 88, 12, 0.65);
+  background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 50%, #f97316 100%);
+  box-shadow: 0 10px 24px -2px rgba(245, 158, 11, 0.5);
   transform: translateY(-1px);
 }
 
@@ -148,53 +161,48 @@ body {
   transform: scale(0.97);
 }
 
-.btn-basha-fire {
-  background: linear-gradient(135deg, #e11d48 0%, #dc2626 100%);
-  color: #fff;
-  font-weight: 900;
-  box-shadow: 0 8px 20px -4px rgba(225, 29, 72, 0.45);
+.btn-basha-secondary {
+  background: rgba(41, 37, 36, 0.75);
+  color: var(--stone-200);
+  font-weight: 700;
+  border: 1px solid rgba(68, 64, 60, 0.6);
+  transition: all 0.2s ease;
 }
 
-.btn-basha-fire:hover {
-  background: linear-gradient(135deg, #f43f5e 0%, #ef4444 100%);
+.btn-basha-secondary:hover {
+  background: rgba(68, 64, 60, 0.85);
+  color: #ffffff;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.btn-basha-secondary:active {
+  transform: scale(0.97);
 }
 
 /* Badges */
-.badge-fire {
-  background: linear-gradient(135deg, #e11d48 0%, #b91c1c 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .badge-gold {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: #000000;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #0c0a09;
   font-weight: 900;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.45);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
-.badge-cheese {
-  background: linear-gradient(135deg, #fbbf24 0%, #b45309 100%);
-  color: #000000;
-  font-weight: 900;
-  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+.badge-dark {
+  background: rgba(12, 10, 9, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--stone-300);
+  border: 1px solid rgba(68, 64, 60, 0.5);
 }
 
 /* Modals */
 .modal-backdrop {
-  background: rgba(8, 7, 6, 0.85);
+  background: rgba(12, 10, 9, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Fast Marquee Banner */
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* Mobile Safe Area, Bottom Nav & Bottom Sheet */
+/* Mobile Safe Area & Sheets */
 .pb-mobile-nav {
   padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
 }
@@ -210,20 +218,6 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-}
-
-.sticky-category-bar {
-  position: sticky;
-  top: 64px;
-  z-index: 25;
-  background: rgba(12, 11, 10, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-@media (min-width: 640px) {
-  .sticky-category-bar {
-    top: 80px;
-  }
 }
 
 @keyframes slideUpBottom {

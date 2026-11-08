@@ -45,19 +45,19 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="text-slate-100 font-cairo antialiased selection:bg-amber-500 selection:text-black min-h-screen flex flex-col justify-between pb-mobile-nav md:pb-0">
+  <body class="bg-stone-950 text-stone-100 font-cairo antialiased selection:bg-amber-500 selection:text-stone-950 min-h-screen flex flex-col justify-between pb-mobile-nav md:pb-0">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-red-600 via-orange-600 to-amber-500 text-black text-[11px] sm:text-xs font-black py-2 px-3 sm:px-4 shadow-lg border-b border-black/10">
+    <div class="bg-gradient-to-r from-stone-950 via-stone-900 to-stone-950 text-stone-200 text-[11px] sm:text-xs font-bold py-2 px-3 sm:px-4 shadow-md border-b border-stone-800">
       <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-center sm:text-right">
         <div class="flex items-center gap-2 mx-auto sm:mx-0">
-          <span class="bg-black text-amber-400 px-2 py-0.5 rounded text-[10px] font-black tracking-wider">عرض الباشا</span>
-          <span>استخدم كود <strong class="bg-black text-amber-400 px-2 py-0.5 rounded-lg border border-amber-300">BASHA20</strong> لخصم 20% فوري | توصيل مجاني للطلبات فوق 350 ج.م</span>
+          <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-stone-950 px-2.5 py-0.5 rounded-full text-[10px] font-black tracking-wider">عرض الباشا</span>
+          <span>استخدم كود <strong class="bg-stone-800 text-amber-400 px-2 py-0.5 rounded-lg border border-stone-700 font-black">BASHA20</strong> لخصم 20% فوري | توصيل مجاني للطلبات فوق 350 ج.م</span>
         </div>
-        <div class="hidden md:flex items-center gap-5 text-[11px] font-black text-black">
+        <div class="hidden md:flex items-center gap-5 text-[11px] font-bold text-stone-400">
           <span>خدمة متواصلة حتى 4 فجراً</span>
           <span>استلام من الفرع بدون طوابير</span>
-          <span>الخط الساخن: <strong class="underline font-black text-sm">19755</strong></span>
+          <span>الخط الساخن: <strong class="underline font-black text-amber-400 text-sm">19755</strong></span>
         </div>
       </div>
     </div>
@@ -83,12 +83,12 @@
         </a>
 
         <!-- Order Mode Quick Switcher in Header -->
-        <div class="hidden md:flex items-center bg-[#171310] p-1.5 rounded-2xl border border-amber-500/20 shadow-inner">
+        <div class="hidden md:flex items-center bg-stone-900 p-1.5 rounded-2xl border border-stone-800 shadow-inner">
           <button 
             type="button"
             data-order-type-btn="delivery"
             onclick="window.setOrderType('delivery')"
-            class="py-2.5 px-4 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-black shadow-lg"
+            class="py-2.5 px-4 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-stone-950 shadow-md"
           >
             توصيل دليفري
           </button>
@@ -96,7 +96,7 @@
             type="button"
             data-order-type-btn="pickup"
             onclick="window.setOrderType('pickup')"
-            class="py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-amber-200/70 hover:text-white"
+            class="py-2.5 px-4 rounded-xl text-xs font-bold transition-all text-stone-400 hover:text-stone-200"
           >
             استلام من الفرع (سريع)
           </button>
@@ -120,7 +120,7 @@
           <button 
             type="button" 
             onclick="window.toggleMobileOrderType()"
-            class="md:hidden flex items-center gap-1 px-2.5 py-1.5 bg-[#1f1a15] border border-amber-500/30 rounded-xl text-[11px] font-black text-amber-300 active:scale-95 transition shadow-sm"
+            class="md:hidden flex items-center gap-1 px-2.5 py-1.5 bg-stone-900 border border-stone-800 rounded-xl text-[11px] font-black text-amber-400 active:scale-95 transition shadow-sm"
             id="mobile-header-order-btn"
             title="تغيير نوع الطلب"
           >
@@ -133,7 +133,7 @@
           <!-- Live Tracker Button -->
           <button 
             onclick="window.openOrderTracker()"
-            class="hidden sm:flex items-center gap-2 px-3.5 py-2.5 bg-[#201a15] hover:bg-[#2c241c] text-amber-300 rounded-xl text-xs font-black border border-amber-500/30 transition shadow-md"
+            class="hidden sm:flex items-center gap-2 px-3.5 py-2.5 bg-stone-900 hover:bg-stone-800 text-stone-200 rounded-xl text-xs font-black border border-stone-800 hover:border-amber-500/30 transition shadow-md"
             title="تتبع طلبك المباشر"
           >
             <svg class="w-4 h-4 text-amber-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,8 +176,8 @@
       <section class="relative pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden">
         
         <!-- Background Lighting Orbs -->
-        <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-10 left-10 w-[450px] h-[450px] bg-red-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-[450px] h-[450px] bg-orange-600/8 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -186,7 +186,7 @@
             <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
               
               <!-- Tagline Pill -->
-              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-red-500/10 border border-amber-400/40 text-amber-300 text-xs font-black shadow-lg">
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900/90 border border-stone-800 text-amber-300 text-xs font-black shadow-lg">
                 <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
                 <span>فراخ بلدي طازة يومياً متبلة 24 ساعة بخلطة الباشا السرية</span>
               </div>
@@ -198,15 +198,15 @@
               </h1>
 
               <!-- Subheading -->
-              <p class="text-base sm:text-lg text-amber-100/80 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              <p class="text-base sm:text-lg text-stone-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
                 فراخ بلدي طازة مش مجمدة، بتتبيلة مصرية معتقة، وقرمشة دهبية تسمع في الشارع التاني! اطلب دليفري يوصلك سخن مولع أو اطلب مسبق وأنت في الطريق واستلم أكلك من أقرب فرع في ثواني بدون أي طابور.
               </p>
 
               <!-- Order Mode Quick Action Card -->
-              <div class="p-5 sm:p-6 bg-[#161310] rounded-3xl border-2 border-amber-500/30 shadow-2xl max-w-xl mx-auto lg:mx-0 shadow-amber-500/10">
+              <div class="p-5 sm:p-6 bg-stone-900/90 rounded-3xl border border-stone-800 shadow-2xl max-w-xl mx-auto lg:mx-0 shadow-black/50">
                 
                 <!-- Toggle Mode -->
-                <div class="flex bg-[#0e0c0a] p-1.5 rounded-2xl border border-amber-500/20 mb-5">
+                <div class="flex bg-stone-950 p-1.5 rounded-2xl border border-stone-800 mb-5">
                   <button 
                     type="button"
                     data-order-type-btn="delivery"
@@ -227,7 +227,7 @@
 
                 <!-- Dynamic Info for Delivery -->
                 <div id="delivery-info-banner" class="space-y-4">
-                  <div class="flex items-center gap-3 text-xs text-amber-100/90 bg-amber-500/10 p-3.5 rounded-2xl border border-amber-500/20">
+                  <div class="flex items-center gap-3 text-xs text-amber-100/90 bg-stone-950/70 p-3.5 rounded-2xl border border-stone-800/80">
                     <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0">
                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -249,7 +249,7 @@
                     <a 
                       href="#menu-section"
                       onclick="window.selectCategory('all')"
-                      class="py-4 px-6 rounded-2xl bg-[#251f19] hover:bg-[#322a22] text-amber-300 font-black text-sm text-center border border-amber-500/30 transition shadow-md"
+                      class="py-4 px-6 rounded-2xl bg-stone-800/80 hover:bg-stone-700/80 text-stone-200 font-black text-sm text-center border border-stone-700/80 hover:border-amber-500/30 transition shadow-md"
                     >
                       عروض وتوفير الباشا
                     </a>
@@ -273,7 +273,7 @@
                       <select 
                         id="hero-pickup-branch-select"
                         onchange="window.setPickupBranch(this.value)"
-                        class="w-full bg-[#1e1915] border border-amber-500/30 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
+                        class="w-full bg-stone-900 border border-amber-500/30 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
                       >
                         <option value="nasr-city">فرع مدينة نصر (شارع عباس العقاد)</option>
                         <option value="tagamoa">فرع التجمع الخامس (شارع التسعين)</option>
@@ -288,7 +288,7 @@
                       <label class="block text-[11px] font-black text-amber-200 mb-1">وقت وصولك المتوقع:</label>
                       <select 
                         id="hero-pickup-time-select"
-                        class="w-full bg-[#1e1915] border border-amber-500/30 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
+                        class="w-full bg-stone-900 border border-amber-500/30 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-amber-400"
                       >
                         <option value="15-mins">بعد 15 دقيقة</option>
                         <option value="30-mins">بعد 30 دقيقة</option>
@@ -334,7 +334,7 @@
                 <div class="absolute -inset-4 bg-gradient-to-tr from-amber-500 via-orange-600 to-red-600 rounded-3xl opacity-35 blur-2xl"></div>
 
                 <!-- Food Card Box -->
-                <div class="relative rounded-3xl overflow-hidden border-2 border-amber-500/40 bg-[#181512] shadow-2xl">
+                <div class="relative rounded-3xl overflow-hidden border-2 border-amber-500/40 bg-stone-900 shadow-2xl">
                   <img 
                     src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/02d1eb83-a5d4-4b64-aa1c-4429c600993a.jpg" 
                     alt="فرايد تشيكن مقرمش شيكن باشا" 
@@ -355,7 +355,7 @@
                   </div>
 
                   <!-- Floating Badge 2 -->
-                  <div class="absolute bottom-4 left-4 float-badge bg-black/85 backdrop-blur-md border border-red-500/50 p-3 rounded-2xl shadow-2xl flex items-center gap-3">
+                  <div class="absolute bottom-4 left-4 float-badge bg-stone-950/90 backdrop-blur-md border border-stone-800/90 p-3 rounded-2xl shadow-xl flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center font-black text-sm">
                       HOT
                     </div>
@@ -375,7 +375,7 @@
       </section>
 
       <!-- 3-Step Process (How It Works) -->
-      <section class="py-14 bg-[#110e0c] border-y border-amber-500/20">
+      <section class="py-14 bg-stone-900/40 border-y border-stone-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-xl mx-auto mb-10">
             <span class="text-xs font-black text-amber-400 uppercase tracking-widest">3 خطوات وتكون أكلتك بين إيديك</span>
@@ -385,7 +385,7 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             <div class="food-card p-6 rounded-3xl relative">
-              <span class="text-4xl font-black text-amber-500/20 absolute top-4 left-6">01</span>
+              <span class="text-4xl font-black text-stone-800 absolute top-4 left-6">01</span>
               <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4 font-bold border border-amber-500/30">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
@@ -398,7 +398,7 @@
             </div>
 
             <div class="food-card p-6 rounded-3xl relative">
-              <span class="text-4xl font-black text-amber-500/20 absolute top-4 left-6">02</span>
+              <span class="text-4xl font-black text-stone-800 absolute top-4 left-6">02</span>
               <div class="w-12 h-12 rounded-2xl bg-orange-500/15 text-orange-400 flex items-center justify-center mb-4 font-bold border border-orange-500/30">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -411,7 +411,7 @@
             </div>
 
             <div class="food-card p-6 rounded-3xl relative">
-              <span class="text-4xl font-black text-amber-500/20 absolute top-4 left-6">03</span>
+              <span class="text-4xl font-black text-stone-800 absolute top-4 left-6">03</span>
               <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-4 font-bold border border-emerald-500/30">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -450,7 +450,7 @@
                 id="menu-search-input"
                 placeholder="ابحث عن وجبة، ساندوتش، ريزو، صوص..." 
                 oninput="window.handleSearchInput(this.value)"
-                class="w-full bg-[#181512] border border-amber-500/25 rounded-2xl py-2.5 pr-10 pl-4 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-amber-400 transition"
+                class="w-full bg-stone-900 border border-stone-800 rounded-2xl py-2.5 pr-10 pl-4 text-xs text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition"
               />
               <span class="absolute right-3.5 top-3 text-amber-400">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -460,7 +460,7 @@
             </div>
 
             <!-- Spicy Filter -->
-            <label class="flex items-center gap-2 px-3.5 py-2.5 bg-[#181512] border border-amber-500/25 rounded-2xl text-xs font-black text-stone-200 cursor-pointer hover:border-amber-400 transition">
+            <label class="flex items-center gap-2 px-3.5 py-2.5 bg-stone-900 border border-stone-800 rounded-2xl text-xs font-black text-stone-300 cursor-pointer hover:border-stone-700 transition">
               <input 
                 type="checkbox" 
                 id="spicy-only-toggle"
@@ -476,10 +476,9 @@
         <!-- Categories Horizontal Scroll Tabs -->
         <div class="sticky-category-bar mb-6 sm:mb-8 py-2.5 -mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto no-scrollbar">
           <div id="categories-container" class="flex items-center gap-2 sm:gap-2.5 min-w-max">
-            
     <button 
       onclick="window.selectCategory('all')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-black font-black shadow-lg shadow-amber-500/30 scale-105 border-amber-300"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500 text-stone-950 font-black shadow-lg shadow-amber-500/25 border-amber-300/40 scale-105"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg></span>
       <span>كل المنيو</span>
@@ -487,7 +486,7 @@
   
     <button 
       onclick="window.selectCategory('sandwiches')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16M4 14h16M7 6h10a4 4 0 014 4v0a1 1 0 01-1 1H4a1 1 0 01-1-1v0a4 4 0 014-4zM5 14h14a2 2 0 012 2v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1a2 2 0 012-2z"/></svg></span>
       <span>الساندوتشات</span>
@@ -495,7 +494,7 @@
   
     <button 
       onclick="window.selectCategory('roll-sandwiches')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></span>
       <span>ساندوتشات رول</span>
@@ -503,7 +502,7 @@
   
     <button 
       onclick="window.selectCategory('chicken-meals')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
       <span>وجبات دجاج</span>
@@ -511,7 +510,7 @@
   
     <button 
       onclick="window.selectCategory('tender-meals')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></span>
       <span>وجبات تندر</span>
@@ -519,7 +518,7 @@
   
     <button 
       onclick="window.selectCategory('family-meals')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></span>
       <span>وجبات عائلية</span>
@@ -527,7 +526,7 @@
   
     <button 
       onclick="window.selectCategory('rizo')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12a8 8 0 01-16 0h16zM4 12v1a4 4 0 004 4h8a4 4 0 004-4v-1"/></svg></span>
       <span>ريزو</span>
@@ -535,7 +534,7 @@
   
     <button 
       onclick="window.selectCategory('kids-meals')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
       <span>وجبات الأطفال</span>
@@ -543,7 +542,7 @@
   
     <button 
       onclick="window.selectCategory('side-items')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span>
       <span>أصناف جانبية</span>
@@ -551,12 +550,11 @@
   
     <button 
       onclick="window.selectCategory('drinks')"
-      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-[#181512] text-amber-100 hover:bg-[#251e18] hover:text-white border border-amber-500/15"
+      class="flex-shrink-0 flex items-center gap-2 px-5 py-3 rounded-2xl text-xs sm:text-sm transition-all duration-200 cursor-pointer border bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 border border-stone-800 hover:border-stone-700"
     >
       <span class="flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></span>
       <span>المشروبات</span>
     </button>
-  
           </div>
         </div>
 
@@ -570,14 +568,14 @@
         <div id="menu-items-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/02d1eb83-a5d4-4b64-aa1c-4429c600993a.jpg" 
           alt="ساندوتش دجاج فيليه" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">828 تقييم إيجابي</span>
@@ -616,14 +614,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/71f1d850-54f1-4614-8df8-a47831f7afca.jpg" 
           alt="ساندوتش دجاج فيليه دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">640 تقييم إيجابي</span>
@@ -662,14 +660,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/9e28ef8e-5237-432d-b049-456c95c8727f.jpg" 
           alt="ساندوتش دجاج فيليه تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -708,14 +706,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/dbb743f2-f1ec-45c3-9645-4bbaf6c834c9.jpg" 
           alt="ساندوتش دجاج فيليه حار" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">489 تقييم إيجابي</span>
@@ -754,14 +752,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/e50de12b-8b8f-4ea8-ba89-03ba8771d704.jpg" 
           alt="ساندوتش دجاج فيليه حار دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">803 تقييم إيجابي</span>
@@ -800,14 +798,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/4ab3e273-43b8-4e23-a2bc-c81cfb5d514a.jpg" 
           alt="ساندوتش دجاج فيليه حار تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -846,14 +844,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/e5bbbf9f-60ad-42f7-8d46-ce7e5ca422d0.jpg" 
           alt="ساندوتش دجاج فيليه اكسترا حار" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">192 تقييم إيجابي</span>
@@ -892,14 +890,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/0281c026-37a9-4669-bbd4-45344d8b99c8.jpg" 
           alt="ساندوتش دجاج فيليه اكسترا حار دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -938,14 +936,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/8624928a-8263-4862-9522-7fcae1e8f5b6.jpg" 
           alt="ساندوتش دجاج فيليه اكسترا حار تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -984,14 +982,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/9dc4cf85-e55b-41ef-98a5-6577fd447e80.jpg" 
           alt="ساندوتش دجاج مشوي" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1030,14 +1028,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/09c9f19e-5675-4d46-b5f2-547542572177.jpg" 
           alt="ساندوتش دجاج مشوي دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1076,14 +1074,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ce92b5ba-fd41-4df1-bd85-86045b43f636.jpg" 
           alt="ساندوتش دجاج مشوي تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1122,14 +1120,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/5777601e-edf8-4c31-ad95-29c54e04013a.jpg" 
           alt="ساندوتش دجاج تركي" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">483 تقييم إيجابي</span>
@@ -1168,14 +1166,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/9cd28ea9-1b8a-4605-a187-3c3c04ad365f.jpg" 
           alt="ساندوتش دجاج تركي دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">245 تقييم إيجابي</span>
@@ -1214,14 +1212,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/3448a837-fa9a-433d-b5cb-4b4d8e1c25cb.jpg" 
           alt="ساندوتش دجاج تركي تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1260,14 +1258,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/cb4c11e7-7904-4a99-860e-4df78ca06c6d.jpg" 
           alt="ساندوتش دجاج تركي حار" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">227 تقييم إيجابي</span>
@@ -1306,14 +1304,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/34b970fc-b69b-497a-85ba-d0185c41a9fa.jpg" 
           alt="ساندوتش تركي دجاج حار دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">171 تقييم إيجابي</span>
@@ -1352,14 +1350,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/42694901-ada8-4016-a418-b2fa369befdc.jpg" 
           alt="ساندوتش دجاج تركي حار تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1398,14 +1396,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/3eaa1551-b6e8-4492-be82-85a6b13a1132.jpg" 
           alt="برجر تكساس" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1444,14 +1442,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/c924af94-9418-4c79-a859-3eabc67e2afb.jpg" 
           alt="برجر تكساس دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1490,14 +1488,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/8ea059f4-7e51-4c2f-9fff-f807901d8c21.jpg" 
           alt="برجر تكساس تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1536,14 +1534,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/15160c1d-6bc0-48a0-b6a3-55dd51538930.jpg" 
           alt="برجر ويسترن باربيكيو" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1582,14 +1580,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/e5dd9aa1-cb04-41db-b174-0d5cefdb8c5f.jpg" 
           alt="برجر ويسترن باربيكيو دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1628,14 +1626,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/525003f8-775a-49bf-940a-310bc0791720.jpg" 
           alt="ساندوتش ويسترن باربيكيو برجر تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1674,14 +1672,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/bf7108d9-3c25-4691-b315-5ff878c345c4.jpg" 
           alt="برجر لحم" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">157 تقييم إيجابي</span>
@@ -1720,14 +1718,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/71359917-43fd-41df-a426-291c3146dd45.jpg" 
           alt="برجر لحم دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1766,14 +1764,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/8d6fdb14-2237-4a5b-a85d-5d5239e20520.jpg" 
           alt="برجر لحم تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1812,14 +1810,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/142bb275-4131-49db-9a03-b598a2c86deb.jpg" 
           alt="برجر لحم مشروم" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">120 تقييم إيجابي</span>
@@ -1858,14 +1856,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/2ad74b03-cfdc-4cd5-a92c-84dbeb09d92c.jpg" 
           alt="برجر لحم مشروم دبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1904,14 +1902,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/e22bd50c-b617-4412-8fd7-f6582e66eb58.jpg" 
           alt="برجر لحم مشروم تريبل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1950,14 +1948,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/51f5de16-8b92-4ed8-a883-ff8fa5948f46.jpg" 
           alt="برجر فايف ستار" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -1996,14 +1994,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/109156b7-536d-4814-ba53-23ffd2f4d9d6.jpg" 
           alt="ساندوتش جمبرى مودرن" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">114 تقييم إيجابي</span>
@@ -2042,14 +2040,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/f6ca9e9d-daed-4f79-ae57-316c5fafcd3d.jpg" 
           alt="ساندوتش رول فيليه دجاج عادي" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">271 تقييم إيجابي</span>
@@ -2088,14 +2086,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/0919ace0-55e7-4ced-b08e-df8fd3c0d975.jpg" 
           alt="ساندوتش رول فيليه دجاج حار" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">442 تقييم إيجابي</span>
@@ -2134,14 +2132,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/f0a8f8f0-25a5-44a7-aad7-40e4286143cb.jpg" 
           alt="ساندوتش رول دجاج مشوي" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -2180,14 +2178,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/2d62e8e9-22a5-4c64-ad0e-4bc2c827f76c.jpg" 
           alt="ساندوتش رول بطاطس" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">232 تقييم إيجابي</span>
@@ -2226,14 +2224,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/df3e65ee-8765-445d-985e-9bcb0a2af908.jpg" 
           alt="ساندوتش رول بطاطس بالكاتشب" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -2272,14 +2270,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b1a09c17-d7f4-4028-9206-b9fed2f0d960.jpg" 
           alt="ساندوتش رول بطاطس مع صوص ثاوزند ايلاند" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -2318,14 +2316,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/2bd8ac3f-a4e3-4f94-98c2-d3bdcb583944.jpg" 
           alt="ساندوتش رول بطاطس مع ثومية" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -2364,14 +2362,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/aa03a6d5-14db-4237-9154-02597eed6b50.jpg" 
           alt="ساندوتش رول بطاطس مع مايونيز" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -2410,14 +2408,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/a082d704-b52b-488e-82ae-9246f49b12d8.jpg" 
           alt="ساندوتش رول ميكس بطاطس" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -2456,14 +2454,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/d232ea09-21f8-4f61-9aab-6d272651f8cf.jpg" 
           alt="ساندوتش رول جمبرى" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">131 تقييم إيجابي</span>
@@ -2502,14 +2500,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/ceac6e00-0ee4-4027-9be9-5504f8a8bfc7.jpg" 
           alt="ساندوتش رول برجر" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -2548,14 +2546,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b7b55768-dab3-487e-ab81-d64964c2c758.jpg" 
           alt="وجبة جولدن" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">2165 تقييم إيجابي</span>
@@ -2594,14 +2592,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/477fcd64-d881-4b0b-9304-9f2145bc9c39.jpg" 
           alt="وجبة كلاسيك" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">2506 تقييم إيجابي</span>
@@ -2640,14 +2638,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/855f741b-3b45-4bc3-a53e-efbe2dc59ced.jpg" 
           alt="وجبة بايت" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">1784 تقييم إيجابي</span>
@@ -2686,14 +2684,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/3c22c519-1ce2-49a1-8fb0-085c845121dc.jpg" 
           alt="وجبة الباشا" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">1112 تقييم إيجابي</span>
@@ -2732,14 +2730,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/86d06336-5a5e-40d4-b2d1-524241132290.jpg" 
           alt="وجبة ميجا" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">201 تقييم إيجابي</span>
@@ -2778,14 +2776,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b602bb11-4f27-4974-bad4-212553d9539f.jpg" 
           alt="وجبة 4 تندر" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">1460 تقييم إيجابي</span>
@@ -2824,14 +2822,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/6d9c9d72-3829-4fda-8313-8c37103645f5.jpg" 
           alt="وجبة 6 تندر" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">321 تقييم إيجابي</span>
@@ -2870,14 +2868,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/3b026e5b-c092-4ab2-a0f4-f01a82fc656a.jpg" 
           alt="وجبة 12 تندر" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">111 تقييم إيجابي</span>
@@ -2916,14 +2914,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/12ec5d74-efbf-4050-bc2c-08fd7e045a20.jpg" 
           alt="وجبة 12 قطعة" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">398 تقييم إيجابي</span>
@@ -2962,14 +2960,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b19278fc-ca30-47d1-a06e-11525bb5ded8.jpg" 
           alt="وجبة 16 قطعة" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">توفير العيلة</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">110 تقييم إيجابي</span>
@@ -3008,14 +3006,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/3b5c424c-1b9e-4b3f-8a5f-fa5a81d05932.jpg" 
           alt="وجبة 20 قطعة" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">توفير العيلة</span>
           
@@ -3054,14 +3052,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/0b3e69be-12fc-41ad-a1b5-c85872808d33.jpg" 
           alt="ارز بسمتي سادة" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">327 تقييم إيجابي</span>
@@ -3100,14 +3098,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/add394e7-71a0-4f8a-b8cc-23f9d284e8ac.jpg" 
           alt="ريزو بالجمبري" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">104 تقييم إيجابي</span>
@@ -3146,14 +3144,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/8477d928-1c4f-4106-b59d-af9724ea3fd0.jpg" 
           alt="ريزو بالدجاج" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3192,14 +3190,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/1dbe50b8-3839-459b-b8c7-d38f6ab1718a.jpg" 
           alt="ريزو بالدجاج المشوي" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3238,14 +3236,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/dad79919-9521-436c-a4d9-67cda5306975.jpg" 
           alt="وجبة اطفال دجاج ناجتس" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">171 تقييم إيجابي</span>
@@ -3284,14 +3282,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/bbd1965a-9bdf-4292-af82-a5e67bb8b285.jpg" 
           alt="وجبة اطفال دجاج مقلى" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3330,14 +3328,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/977563bf-9265-4b4d-b53e-0aa42d45baa3.jpg" 
           alt="وجبة اطفال بيف برجر" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3376,14 +3374,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b5cd36d0-41e2-4732-b025-50c2c5a4c81b.jpg" 
           alt="وجبة اطفال دجاج فيليه" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">118 تقييم إيجابي</span>
@@ -3422,14 +3420,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/71e1ecd0-29da-4249-bb9f-26724a7c8878.jpg" 
           alt="بطاطس بالجبنة" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">469 تقييم إيجابي</span>
@@ -3468,14 +3466,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/1463a4b8-cd67-4ba7-8be1-790fe50bad5c.jpg" 
           alt="4اصابع موتزاريلا" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3514,14 +3512,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/0b9055dc-f502-4445-92c4-6adfe93513f0.jpg" 
           alt="حلقات بصل" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">114 تقييم إيجابي</span>
@@ -3560,14 +3558,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/3ddf5c9a-7a3f-436d-817d-ad0de720e6c2.jpg" 
           alt="شيدر هالبينو بايتس" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">138 تقييم إيجابي</span>
@@ -3606,14 +3604,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/fb93ed1b-9ca0-4fe9-8fdc-82da62ed612c.jpg" 
           alt="كول سلو" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">1493 تقييم إيجابي</span>
@@ -3652,14 +3650,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/500fa134-f3cc-4811-a0f1-2e22603f05e7.jpg" 
           alt="صوص جبنة شيدر" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3698,14 +3696,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/051712e8-7b85-4853-8360-1dd64aa3fb45.jpg" 
           alt="بطاطس مقلية" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">441 تقييم إيجابي</span>
@@ -3744,14 +3742,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/99cfd5bc-7757-4cfc-8f3b-0b57850fb912.jpg" 
           alt="ثومية" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">مميز جداً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">494 تقييم إيجابي</span>
@@ -3790,14 +3788,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/d1ef6b40-6710-4627-aa6d-81e276fbf9c3.jpg" 
           alt="كاتشب" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3836,14 +3834,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/e4a5acb4-5285-4746-b348-fac26d1dba42.jpg" 
           alt="صوص باربيكيو" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">178 تقييم إيجابي</span>
@@ -3882,14 +3880,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/451d095a-a3a1-441b-adb6-2f4a40cbdc22.jpg" 
           alt="مايونيز" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3928,14 +3926,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/0c5dccd8-c7d0-4033-bb1f-4bb9bca02413.jpg" 
           alt="هالبينو" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -3974,14 +3972,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/b433c2a6-91ae-4d92-a278-05ea4bee6f28.jpg" 
           alt="بيبسى" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span class="px-3 py-1 bg-amber-500 text-black font-black text-xs rounded-xl shadow-lg border border-amber-300">الأكثر طلباً</span>
           <span class="px-2.5 py-1 bg-black/80 backdrop-blur text-amber-300 text-xs font-bold rounded-xl border border-amber-500/30">541 تقييم إيجابي</span>
@@ -4020,14 +4018,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/00fedbfe-6182-4d0f-8dc0-e42a40461123.jpg" 
           alt="سفن اب" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -4066,14 +4064,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/8cf7ff15-75c4-4ce4-a210-727a378d6dec.jpg" 
           alt="ميرندا برتقال" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -4112,14 +4110,14 @@
     </div>
   
     <div class="food-card rounded-3xl overflow-hidden flex flex-col justify-between group">
-      <div class="relative h-60 overflow-hidden bg-[#241e19]">
+      <div class="relative h-60 overflow-hidden bg-stone-950">
         <img 
           src="https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/e76e53e0-8ed8-4132-b435-f34b014c7b8f.jpg" 
           alt="ميرندا تفاح" 
           loading="lazy"
           class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#161310] via-transparent to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/10 to-transparent"></div>
         <div class="absolute top-3 right-3 left-3 flex items-center justify-between pointer-events-none gap-2">
           <span></span>
           
@@ -4162,7 +4160,7 @@
       </section>
 
       <!-- Branches Section -->
-      <section id="branches-section" class="py-16 bg-[#110e0c] border-y border-amber-500/20">
+      <section id="branches-section" class="py-16 bg-stone-950 border-y border-amber-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="text-xs font-black text-amber-400 uppercase tracking-widest">فروعنا الـ 6 في خدمتك دائماً</span>
@@ -4410,7 +4408,7 @@
       </section>
 
       <!-- Customer Reviews -->
-      <section id="reviews-section" class="py-16 bg-[#110e0c] border-t border-amber-500/20">
+      <section id="reviews-section" class="py-16 bg-stone-950 border-t border-amber-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="text-xs font-black text-amber-400 uppercase tracking-widest">شهادة نعتز بيها</span>
@@ -4478,7 +4476,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#080706] border-t-2 border-amber-500/20 pt-14 pb-8 text-stone-400 text-xs">
+    <footer class="bg-stone-950 border-t-2 border-amber-500/20 pt-14 pb-8 text-stone-400 text-xs">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-white/5">
           
@@ -4541,11 +4539,11 @@
     
     <div 
       id="cart-drawer" 
-      class="fixed top-0 bottom-0 left-0 w-full sm:w-[460px] bg-[#14110e] border-r-2 border-amber-500/25 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl"
+      class="fixed top-0 bottom-0 left-0 w-full sm:w-[460px] bg-stone-950 border-r-2 border-amber-500/25 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between shadow-2xl"
     >
       
       <!-- Drawer Header -->
-      <div class="p-5 bg-[#1b1713] border-b border-amber-500/20 flex items-center justify-between">
+      <div class="p-5 bg-stone-900 border-b border-amber-500/20 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold text-xl border border-amber-500/30">
             <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4567,8 +4565,8 @@
       </div>
 
       <!-- Order Mode Toggle inside Drawer -->
-      <div class="p-3.5 bg-[#171310] border-b border-amber-500/15">
-        <div class="flex bg-[#0f0d0b] p-1 rounded-xl border border-amber-500/20 text-xs font-bold">
+      <div class="p-3.5 bg-stone-900 border-b border-amber-500/15">
+        <div class="flex bg-stone-950 p-1 rounded-xl border border-amber-500/20 text-xs font-bold">
           <button 
             type="button"
             data-order-type-btn="delivery"
@@ -4613,7 +4611,7 @@
       </div>
 
       <!-- Drawer Footer -->
-      <div id="cart-drawer-footer" class="p-5 bg-[#181512] border-t border-amber-500/20 space-y-4">
+      <div id="cart-drawer-footer" class="p-5 bg-stone-950 border-t border-stone-800 space-y-4">
         
         <!-- Promo Code Input -->
         <div class="flex gap-2">
@@ -4621,7 +4619,7 @@
             type="text" 
             id="promo-input-field" 
             placeholder="كود الخصم (جرب: BASHA20)" 
-            class="flex-1 bg-[#221c17] border border-amber-500/20 rounded-xl px-3.5 py-2 text-xs text-white uppercase placeholder-stone-500 focus:outline-none focus:border-amber-400 font-bold"
+            class="flex-1 bg-stone-900 border border-stone-800 rounded-xl px-3.5 py-2 text-xs text-stone-100 uppercase placeholder-stone-500 focus:outline-none focus:border-amber-400 font-bold"
           />
           <button 
             type="button"
@@ -4670,7 +4668,7 @@
     <!-- Customizer Modal -->
     <div id="customizer-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div onclick="window.closeCustomizerModal()" class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-      <div id="customizer-content" class="relative w-full max-w-lg bg-[#181512] rounded-t-3xl sm:rounded-3xl border-t-2 sm:border-2 border-amber-500/30 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
+      <div id="customizer-content" class="relative w-full max-w-lg bg-stone-900 rounded-t-3xl sm:rounded-3xl border-t sm:border border-stone-700/70 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
         <!-- Rendered dynamically by app.js -->
       </div>
     </div>
@@ -4678,10 +4676,10 @@
     <!-- Checkout Modal -->
     <div id="checkout-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div onclick="window.closeCheckoutModal()" class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-      <div class="relative w-full max-w-xl bg-[#181512] rounded-t-3xl sm:rounded-3xl border-t-2 sm:border-2 border-amber-500/30 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
+      <div class="relative w-full max-w-xl bg-stone-900 rounded-t-3xl sm:rounded-3xl border-t sm:border border-stone-700/70 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
         <div class="w-10 h-1 bg-stone-700 rounded-full mx-auto my-2.5 sm:hidden flex-shrink-0"></div>
         
-        <div class="p-5 bg-[#1f1a15] border-b border-amber-500/20 flex items-center justify-between">
+        <div class="p-5 bg-stone-900 border-b border-stone-800 flex items-center justify-between">
           <div class="flex items-center gap-2.5">
             <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
@@ -4703,7 +4701,7 @@
     <!-- Tracker Modal -->
     <div id="tracker-modal" class="fixed inset-0 z-50 hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div onclick="window.closeOrderTracker()" class="absolute inset-0 bg-black/85 backdrop-blur-sm"></div>
-      <div id="tracker-content" class="relative w-full max-w-lg bg-[#181512] rounded-t-3xl sm:rounded-3xl border-t-2 sm:border-2 border-amber-500/40 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
+      <div id="tracker-content" class="relative w-full max-w-lg bg-stone-900 rounded-t-3xl sm:rounded-3xl border-t sm:border border-stone-700/70 shadow-2xl overflow-hidden z-10 max-h-[92vh] flex flex-col modal-sheet">
         <!-- Rendered by app.js -->
       </div>
     </div>
@@ -4740,7 +4738,7 @@
 
     
     <!-- Bottom Navigation Bar for Mobile Phones (Native App Experience) -->
-    <nav id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 z-40 bg-[#14110e]/95 backdrop-blur-xl border-t border-amber-500/25 px-3 py-1.5 md:hidden flex justify-around items-center bottom-nav-safe shadow-[0_-5px_25px_rgba(0,0,0,0.7)]">
+    <nav id="mobile-bottom-nav" class="fixed bottom-0 left-0 right-0 z-40 bg-stone-950/95 backdrop-blur-xl border-t border-stone-800 px-3 py-1.5 md:hidden flex justify-around items-center bottom-nav-safe shadow-[0_-5px_25px_rgba(0,0,0,0.7)]">
       
       <!-- Menu Tab -->
       <a href="#menu-section" class="flex flex-col items-center justify-center py-1 px-2 text-stone-300 hover:text-amber-400 active:scale-95 transition">
@@ -4757,7 +4755,7 @@
       </button>
 
       <!-- Central Cart Button (Highlighted & Accessible) -->
-      <button onclick="window.openCartDrawer()" class="relative -top-3 flex flex-col items-center justify-center w-14 h-14 rounded-full btn-basha-primary shadow-xl shadow-amber-500/40 active:scale-95 transition border-2 border-black cursor-pointer">
+      <button onclick="window.openCartDrawer()" class="relative -top-3 flex flex-col items-center justify-center w-14 h-14 rounded-full btn-basha-primary shadow-xl shadow-amber-500/30 active:scale-95 transition border-2 border-stone-950 cursor-pointer">
         <svg class="w-6 h-6 text-black fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
         <span id="mobile-nav-cart-badge" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-600 text-white font-black text-[10px] flex items-center justify-center border-2 border-black">0</span>
       </button>
